@@ -1,0 +1,8 @@
+.twoBoxPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* List | Image */
+  width: 100%;
+  margin-top: 300px;
+  margin-bottom: 300px;
+}

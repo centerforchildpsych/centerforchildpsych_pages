@@ -1,4 +1,6 @@
 import styles from "./page.module.css";
+import TwoItemBox from "@/components/TwoItemBox";
+// import styles from "@/components/TwoItemBox.module.css";
 
 export default function Home() {
   return (
@@ -8,11 +10,11 @@ export default function Home() {
           className={styles.imageArc}
           src="/photos/buildingImage.png"
           alt="Center for Child Pysch logo"
-          priority="true"
         />
 
         <section>
-          <div className={styles.imageTextGrid}>
+          <TwoItemBox>
+            {/* First Child: Text Section */}
             <div className={styles.textSection}>
               <div className={styles.textItems}>
                 <h3>You wish someone could help you figure this all out…..</h3>
@@ -25,13 +27,15 @@ export default function Home() {
                 <p>To say you’re lacking in direction feels like a big understatement.</p>
               </div>
             </div>
+
+            {/* Second Child: Image Section */}
             <div className={styles.imageSection}>
               <img
                 src="/photos/buildingImage.png"
-                alt="Center for Child Pysch logo"
-                priority="true" />
+                alt="Center for Child Psych logo"
+              />
             </div>
-          </div>
+          </TwoItemBox>
         </section>
 
       </main>
