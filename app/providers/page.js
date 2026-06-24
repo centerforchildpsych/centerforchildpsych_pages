@@ -4,7 +4,7 @@ export default function Providers() {
     return (
         <>
             <PageTransition />
-            <h1>Provider Profiles</h1>
+            <h1 style={{ height: "500px", margin: "50px"  }}>Provider Profiles</h1>
         </>
     );
 }

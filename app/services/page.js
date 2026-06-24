@@ -4,10 +4,7 @@ export default function Services() {
     return (
         <>
             <PageTransition />
-            <h1>Our Services</h1>
-            <ul>
-                <li>TMS</li>
-            </ul>
+            <h1 style={{ height: "500px", margin: "50px" }}>Our Services</h1>
         </>
     );
 }

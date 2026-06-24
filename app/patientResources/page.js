@@ -4,7 +4,7 @@ export default function PatientResources() {
     return (
         <>
             <PageTransition />
-            <h1>Patient Resources</h1>
+            <h1 style={{ height: "500px", margin: "50px"  }}>Patient Resources</h1>
         </>
     );
 }

@@ -4,7 +4,7 @@ export default function Insurance() {
     return (
         <>
             <PageTransition />
-            <h1>Insurance & Billing</h1>
+            <h1 style={{ height: "500px", margin: "50px"  }}>Insurance & Billing</h1>
         </>
     );
 }
