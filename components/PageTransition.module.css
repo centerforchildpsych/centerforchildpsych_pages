@@ -1,0 +1,21 @@
+.screenOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: #f5efe5;
+  z-index: 2000;
+
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+.screenOverlay.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.imageLogo {
+  width: 800px;
+  object-fit: contain;
+}

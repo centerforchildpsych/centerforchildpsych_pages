@@ -1,8 +1,11 @@
+
+
 .emailLink {
   color: inherit;
   text-decoration: underline;
   transition: opacity 0.2s ease;
 }
+
 .emailLink:hover {
   opacity: 0.8;
 }

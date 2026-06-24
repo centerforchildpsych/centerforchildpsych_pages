@@ -18,7 +18,7 @@ function Header() {
                     centerforchildpsych@gmail.com
                 </a>
             </p>
-            
+
             <div className={styles.scrollngHeader}>
 
                 <div>
@@ -37,14 +37,37 @@ function Header() {
                     ☰
                 </div>
                 <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
-                    <Link className={styles.navBarLink} href="/">Home</Link>
-                    <a className={styles.navBarLink} href="#">Services</a>
-                    <Link className={styles.navBarLink} href="/about">About</Link>
-                    <a className={styles.navBarLink} href="#">Our Providers</a>
-                    <a className={styles.navBarLink} href="#">Insurance & Billing</a>
-                    <a className={styles.navBarLink} href="#">Patient Resources</a>
-                    <a className={styles.navBarLink} href="https://27185.portal.athenahealth.com/">Patient Portal</a>
-                    <a className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1">BOOK NOW</a>
+                    <Link className={styles.navBarLink} href="/" onClick={() => setMenuOpen(false)}>
+                        Home
+                    </Link>
+                    <a className={styles.navBarLink} href="#"
+                        onClick={() => setMenuOpen(false)}>
+                        Services
+                    </a>
+                    <Link className={styles.navBarLink} href="/about"
+                        onClick={() => setMenuOpen(false)}>
+                        About
+                    </Link>
+                    <a className={styles.navBarLink} href="#"
+                        onClick={() => setMenuOpen(false)}>
+                        Our Providers
+                    </a>
+                    <a className={styles.navBarLink} href="#"
+                        onClick={() => setMenuOpen(false)}>
+                        Insurance & Billing
+                    </a>
+                    <a className={styles.navBarLink} href="#"
+                        onClick={() => setMenuOpen(false)}>
+                        Patient Resources
+                    </a>
+                    <a className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
+                        onClick={() => setMenuOpen(false)}>
+                        Patient Portal
+                    </a>
+                    <a className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
+                        onClick={() => setMenuOpen(false)}>
+                        BOOK NOW
+                    </a>
                 </div>
 
             </div>

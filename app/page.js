@@ -1,12 +1,13 @@
 import styles from "./page.module.css";
 import TwoItemBox from "@/components/TwoItemBox";
 import ImageHero from "@/components/ImageHero";
+import PageTransition from "@/components/PageTransition";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        
+        <PageTransition />
 
         <ImageHero
           image="/photos/HandsHoldPaperFamily.png"
