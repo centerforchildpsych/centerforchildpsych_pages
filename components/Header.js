@@ -40,7 +40,7 @@ function Header() {
                     <Link className={styles.navBarLink} href="/" onClick={() => setMenuOpen(false)}>
                         Home
                     </Link>
-                    <a className={styles.navBarLink} href="#"
+                    <a className={styles.navBarLink} href="/services"
                         onClick={() => setMenuOpen(false)}>
                         Services
                     </a>
@@ -48,15 +48,15 @@ function Header() {
                         onClick={() => setMenuOpen(false)}>
                         About
                     </Link>
-                    <a className={styles.navBarLink} href="#"
+                    <a className={styles.navBarLink} href="/providers"
                         onClick={() => setMenuOpen(false)}>
                         Our Providers
                     </a>
-                    <a className={styles.navBarLink} href="#"
+                    <a className={styles.navBarLink} href="/insurance"
                         onClick={() => setMenuOpen(false)}>
                         Insurance & Billing
                     </a>
-                    <a className={styles.navBarLink} href="#"
+                    <a className={styles.navBarLink} href="/patientResources"
                         onClick={() => setMenuOpen(false)}>
                         Patient Resources
                     </a>
