@@ -40,6 +40,8 @@
 }
 
 .navButton {
+  color: inherit;
+  text-decoration: none;
   padding: 20px;
   background-color: rgba(109, 172, 255, 0.793);
   transition: 0.25s ease;

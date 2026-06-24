@@ -1,27 +1,11 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
 import styles from "./Header.module.css"
 
 function Header() {
-    const [stickyHeader, setStickyHeader] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (window.scrollY > 60) {
-    //             setStickyHeader(true);
-    //         } else {
-    //             setStickyHeader(false);
-    //         }
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
 
     return (
         <>
@@ -35,8 +19,7 @@ function Header() {
                 </a>
             </p>
             
-            {/* <div className={`${styles.scrollngHeader} ${stickyHeader ? styles.sticky : styles.stickyOffset}`}> */}
-            <div className={`${styles.scrollngHeader} `}>
+            <div className={styles.scrollngHeader}>
 
                 <div>
                     <img
@@ -54,14 +37,14 @@ function Header() {
                     ☰
                 </div>
                 <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
-                    <a className={styles.navBarLink} href='#'>Home</a>
-                    <a className={styles.navBarLink} href='#'>Services</a>
-                    <a className={styles.navBarLink} href='#'>About</a>
-                    <a className={styles.navBarLink} href='#'>Our Providers</a>
-                    <a className={styles.navBarLink} href='#'>Insurance & Billing</a>
-                    <a className={styles.navBarLink} href='#'>Patient Resources</a>
-                    <a className={styles.navBarLink} href='https://27185.portal.athenahealth.com/'>Patient Portal</a>
-                    <a className={styles.navButton} href='https://consumer.scheduling.athena.io/?locationId=27185-1'>BOOK NOW</a>
+                    <Link className={styles.navBarLink} href="/">Home</Link>
+                    <a className={styles.navBarLink} href="#">Services</a>
+                    <Link className={styles.navBarLink} href="/about">About</Link>
+                    <a className={styles.navBarLink} href="#">Our Providers</a>
+                    <a className={styles.navBarLink} href="#">Insurance & Billing</a>
+                    <a className={styles.navBarLink} href="#">Patient Resources</a>
+                    <a className={styles.navBarLink} href="https://27185.portal.athenahealth.com/">Patient Portal</a>
+                    <a className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1">BOOK NOW</a>
                 </div>
 
             </div>
