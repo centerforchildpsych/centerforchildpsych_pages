@@ -3,22 +3,28 @@ html {
 }
 
 .page {
-  background-color: #c9bca9;
+  background-color: rgb(245, 239, 229);
 }
 
 .main {
-  background-color: #c9bca9;
+  background-color: rgb(245, 239, 229);
 }
 
 .imageArc {
-  border: #8b6b4a solid 2px;
+  border: #8b6b4a solid 1px;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
-  width: 35%;
+  width: 500px;
   margin-top: 200px;
   margin-left: 200px;
 }
 
+@media screen and (max-width: 900px) {
+  .imageArc {
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+}
 
 
 
@@ -34,7 +40,7 @@ html {
   justify-content: center;
   border: #8b6b4a solid 1px;
   border-right: none;
-  background-color: #c9bca9;
+  background-color: rgb(245, 239, 229);
 }
 
 .textSection ul {

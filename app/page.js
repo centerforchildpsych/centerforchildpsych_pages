@@ -1,16 +1,23 @@
 import styles from "./page.module.css";
 import TwoItemBox from "@/components/TwoItemBox";
-// import styles from "@/components/TwoItemBox.module.css";
+import ImageHero from "@/components/ImageHero";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <img
-          className={styles.imageArc}
-          src="/photos/buildingImage.png"
-          alt="Center for Child Pysch logo"
-        />
+        
+
+        <ImageHero
+          image="/photos/HandsHoldPaperFamily.png"
+          alt="Hands holding a paper family"
+        >
+          <h1>Supporting Children & Families</h1>
+          <p>
+            Compassionate mental health care for children, adolescents, and their
+            families.
+          </p>
+        </ImageHero>
 
         <section>
           <TwoItemBox>
