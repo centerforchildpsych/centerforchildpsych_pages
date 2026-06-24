@@ -9,7 +9,7 @@ export default function PageTransition() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setFade(true);
-        }, 100);
+        }, 500);
 
         return () => clearTimeout(timer);
     }, []);
