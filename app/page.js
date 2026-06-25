@@ -9,18 +9,21 @@ export default function Home() {
       <main className={styles.main}>
         <PageTransition />
 
-        <ImageHero
-          image="/photos/HandsHoldPaperFamily.png"
-          alt="Hands holding a paper family"
-        >
-          <h1>Supporting Children & Families</h1>
-          <p>
-            Compassionate mental health care for children, adolescents, and their
-            families.
-          </p>
-        </ImageHero>
+        <section className={styles.section1}>
+          <ImageHero
+            image="/photos/HandsHoldPaperFamily.png"
+            alt="Hands holding a paper family"
+            // left={true}
+          >
+            <h1>Supporting Children & Families</h1>
+            <p>
+              Compassionate mental health care for children, adolescents, and their
+              families.
+            </p>
+          </ImageHero>
+        </section>
 
-        <section>
+        <section className={styles.section2}>
           <TwoItemBox>
             {/* First Child: Text Section */}
             <div className={styles.textSection}>

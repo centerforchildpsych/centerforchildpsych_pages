@@ -1,28 +1,34 @@
 .imageContainer {
   position: relative;
-  width: 100%;
+  width: 50%;
+  margin: 50px;
 }
 
 .image {
   display: block;
-  width: 100%;
-  height: auto;
+  max-width: 800;
+  border: saddlebrown solid 1px;
+  border-radius: 15px;
 }
 
 .overlay {
   position: absolute;
   top: 50%;
-  left: 8%;
+  left: 85%;
   transform: translateY(-50%);
 
-  background: rgba(0, 0, 0, 0.35);
-  color: white;
+  background: rgba(93, 91, 91, 0.105);
+  color: rgb(117, 97, 50);
 
   padding: 2rem;
   border-radius: 12px;
   max-width: 500px;
 
   backdrop-filter: blur(2px);
+}
+
+.overlay.textLeft {
+  left: -45%;
 }
 
 .overlay h1,
@@ -35,4 +41,17 @@
   margin: 0;
   line-height: 1.6;
   font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+/* SMALL PHONES */
+@media (max-width: 500px) {
+  .overlay.textLeft {
+    left: 0;
+    top: 150%;
+    display: flex;
+  }
+
+  .image {
+    max-width: 400px;
+  }
 }
