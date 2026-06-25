@@ -1,6 +1,7 @@
 import PageTransition from "@/components/PageTransition";
 import Rotator from "@/components/Rotator";
 import styles from "./page.module.css"
+import Carousel from "@/components/Carousel";
 
 export default function Providers() {
     const mixedSlides = [
@@ -19,6 +20,7 @@ export default function Providers() {
     return (
         <>
             <PageTransition />
+            <Carousel/>
             <section className={styles.section1}>
                 <main style={{ padding: "2rem" }}>
                     {/* Rotates every 3 seconds (default) */}

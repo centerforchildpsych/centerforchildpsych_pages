@@ -9,6 +9,8 @@
   max-width: 800;
   border: saddlebrown solid 1px;
   border-radius: 15px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
 }
 
 .overlay {
@@ -17,14 +19,15 @@
   left: 85%;
   transform: translateY(-50%);
 
-  background: rgba(93, 91, 91, 0.105);
-  color: rgb(117, 97, 50);
+  background: rgba(255, 255, 255, 0.671);
+  color: rgb(54, 45, 23);
 
   padding: 2rem;
+  border: solid rgba(203, 141, 69, 0.768) 1px;
   border-radius: 12px;
-  max-width: 500px;
+  width: 400px;
 
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 
 .overlay.textLeft {
@@ -33,14 +36,14 @@
 
 .overlay h1,
 .overlay h2 {
-  margin: 0 0 1rem;
-  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 1rem;
+  font-size: 2rem;
 }
 
 .overlay p {
   margin: 0;
-  line-height: 1.6;
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 2;
+  font-size: 1rem;
 }
 
 /* SMALL PHONES */

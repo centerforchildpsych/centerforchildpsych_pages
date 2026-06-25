@@ -1,3 +1,11 @@
+/* 
+The standard RGB code for beige is (245, 245, 220).
+Common Variations
+  Light Beige: (249, 246, 237)
+  Dark Beige: (214, 199, 167)
+  Tuscan Beige: (241, 230, 203) 
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,11 +16,11 @@ html {
 }
 
 .page {
-  background-color: rgb(245, 239, 229);
+  background-color: rgb(249, 246, 237)
 }
 
 .main {
-  background-color: rgb(245, 239, 229);
+  background-color: rgb(249, 246, 237)
 }
 
 .imageArc {
@@ -45,7 +53,7 @@ html {
   justify-content: center;
   border: #8b6b4a solid 1px;
   border-right: none;
-  background-color: rgb(245, 239, 229);
+  background-color: rgb(249, 246, 237)
 }
 
 .textSection ul {
@@ -62,7 +70,7 @@ html {
 
 .textSection li::before {
   content: "✗";
-  color: rgba(148, 12, 12, 0.492);
+  color: rgba(165, 156, 126, 0.695);
   position: relative;
   left: -1.5em;
   font-weight: bold;

@@ -3,22 +3,24 @@ import TwoItemBox from "@/components/TwoItemBox";
 import ImageHero from "@/components/ImageHero";
 import PageTransition from "@/components/PageTransition";
 
+
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <PageTransition />
-
+        
         <section className={styles.section1}>
           <ImageHero
-            image="/photos/HandsHoldPaperFamily.png"
-            alt="Hands holding a paper family"
-            // left={true}
+            image="/photos/buildingImage.png"
+            alt="Center for Child Psych logo"
+          // left={true}
           >
-            <h1>Supporting Children & Families</h1>
+            <h1>Our North Gray Street location is now open!</h1>
             <p>
-              Compassionate mental health care for children, adolescents, and their
-              families.
+              Thank you for your patience over the past year as we renovated our original building at 1103 North Gray Street. 
+              An official historic landmark, we hope its restoration will support a renewed sense of appreciation for downtown Killeen.
+              Please go to 1103 N. Gray Street, Killeen TX 76541 for all in-person visits and inquiries. We are no longer at Jasper Drive.
             </p>
           </ImageHero>
         </section>
@@ -42,8 +44,8 @@ export default function Home() {
             {/* Second Child: Image Section */}
             <div className={styles.imageSection}>
               <img
-                src="/photos/buildingImage.png"
-                alt="Center for Child Psych logo"
+                src="/photos/HandsHoldPaperFamily.png"
+                alt="Hands holding a paper family"
               />
             </div>
           </TwoItemBox>
