@@ -1,7 +1,7 @@
 .imageContainer {
   position: relative;
   width: 50%;
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 .image {
@@ -36,7 +36,7 @@
 
 .overlay h1,
 .overlay h2 {
-  margin: 1rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
 }
 

@@ -2,28 +2,6 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./Carousel.module.css";
-
-// Mock Data structure for the demo
-// const SAMPLE_SLIDES = [
-//   {
-//     id: 1,
-//     title: "First Canvas",
-//     caption: "Eager Load Resource Focus",
-//     className: "slide1",
-//   },
-//   {
-//     id: 2,
-//     title: "Second Canvas",
-//     caption: "Fluid Layout System",
-//     className: "slide2",
-//   },
-//   {
-//     id: 3,
-//     title: "Third Canvas",
-//     caption: "Hardware Accelerated Snap",
-//     className: "slide3",
-//   },
-// ];
 const SAMPLE_SLIDES = [
   {
     id: 1,
@@ -52,8 +30,6 @@ const SAMPLE_SLIDES = [
 ];
 export default function Carousel({ slides = SAMPLE_SLIDES }) {
   const trackRef = useRef(null);
-  // const [isPrevDisabled, setIsPrevDisabled] = useState(true);
-  // const [isNextDisabled, setIsNextDisabled] = useState(false);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -61,11 +37,7 @@ export default function Carousel({ slides = SAMPLE_SLIDES }) {
     const track = trackRef.current;
     if (!track) return;
 
-    const { scrollLeft, scrollWidth, clientWidth } = track;
-    const maxScroll = scrollWidth - clientWidth;
-
-    // setIsPrevDisabled(scrollLeft <= 2);
-    // setIsNextDisabled(scrollLeft >= maxScroll - 2);
+    const { scrollWidth, clientWidth } = track;
   };
 
   useEffect(() => {
@@ -133,23 +105,6 @@ export default function Carousel({ slides = SAMPLE_SLIDES }) {
         ref={trackRef}
       >
         {slides.map((slide) => (
-          // <li
-          //   key={slide.id}
-          //   className={styles.carouselSlide}
-          //   tabIndex={0}
-          // >
-          //   <div
-          //     className={`${styles.placeholderCard} ${
-          //       styles[slide.className]
-          //     }`}
-          //   >
-          //     <span>{slide.title}</span>
-
-          //     <div className={styles.slideCaption}>
-          //       {slide.caption}
-          //     </div>
-          //   </div>
-          // </li>
           <li
             key={slide.id}
             className={styles.carouselSlide}
@@ -161,12 +116,12 @@ export default function Carousel({ slides = SAMPLE_SLIDES }) {
                 alt={slide.title}
                 className={styles.slideImage}
               />
-
+{/* 
               <div className={styles.slideCaption}>
                 <strong>{slide.title}</strong>
                 <br />
                 {slide.caption}
-              </div>
+              </div> */}
             </div>
           </li>
         ))}

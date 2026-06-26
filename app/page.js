@@ -2,14 +2,16 @@ import styles from "./page.module.css";
 import TwoItemBox from "@/components/TwoItemBox";
 import ImageHero from "@/components/ImageHero";
 import PageTransition from "@/components/PageTransition";
-
+import BlankSpace from"@/components/BlankSpace";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <PageTransition />
-        
+
+        <BlankSpace height="50px"/>
+
         <section className={styles.section1}>
           <ImageHero
             image="/photos/buildingImage.png"
@@ -24,6 +26,8 @@ export default function Home() {
             </p>
           </ImageHero>
         </section>
+
+        <BlankSpace/>
 
         <section className={styles.section2}>
           <TwoItemBox>
@@ -50,6 +54,8 @@ export default function Home() {
             </div>
           </TwoItemBox>
         </section>
+
+        <BlankSpace/>
 
       </main>
     </div>
