@@ -1,7 +1,8 @@
 import PageTransition from "@/components/PageTransition";
-import Rotator from "@/components/Rotator";
+// import Rotator from "@/components/Rotator";
 import styles from "./page.module.css"
 import Carousel from "@/components/Carousel";
+import BlankSpace from "@/components/BlankSpace";
 
 export default function Providers() {
     const mixedSlides = [
@@ -14,18 +15,21 @@ export default function Providers() {
             {/* logo fade out on page load */}
             <PageTransition />
 
-            <Carousel/>
+            <BlankSpace />
 
             <section className={styles.section1}>
+                <Carousel />
+            </section>
+
+            <BlankSpace />
+
+            {/* <section className={styles.section1}>
                 <main style={{ padding: "2rem" }}>
-                    {/* Rotates every 3 seconds (default) */}
                     <Rotator items={mixedSlides} />
-                    {/* Faster rotation example */}
                     <Rotator items={["Thoughtful providers", "A better you"]} interval={1500} />
                 </main>
                 <h1 style={{ height: "500px", margin: "50px" }}>Provider Profiles</h1>
-
-            </section>
+            </section> */}
         </>
     );
 }

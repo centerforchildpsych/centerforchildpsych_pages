@@ -2,7 +2,8 @@ import styles from "./page.module.css";
 import TwoItemBox from "@/components/TwoItemBox";
 import ImageHero from "@/components/ImageHero";
 import PageTransition from "@/components/PageTransition";
-import BlankSpace from"@/components/BlankSpace";
+import BlankSpace from "@/components/BlankSpace";
+import GoogleMap from "@/components/GoogleMap";
 
 export default function Home() {
   return (
@@ -10,7 +11,59 @@ export default function Home() {
       <main className={styles.main}>
         <PageTransition />
 
-        <BlankSpace height="50px"/>
+        {/* <BlankSpace /> */}
+
+        <section className={styles.hero}>
+
+          <div className={styles.heroText}>
+            <h1>
+              Compassionate Care
+              For Every Stage
+              Of Your Journey
+            </h1>
+
+            <p>
+              Therapy, psychiatric care, and support
+              designed around your unique needs,
+              helping you feel like yourself again.
+            </p>
+
+            <div className={styles.heroButtons}>
+              <button className={styles.primaryBtn}>
+                Book a Session
+              </button>
+
+              <button className={styles.secondaryBtn}>
+                Explore Services
+              </button>
+            </div>
+          </div>
+
+          <div className={styles.heroImage}>
+            <img
+              src="/photos/MomHoldingDaughter.png"
+              alt="Mom Holding Daughter" />
+          </div>
+
+        </section>
+
+        {/* <hr className={styles.hrLine}/> */}
+        <section className={styles.intro}>
+
+          <h2>You deserve care that sees the whole person.</h2>
+
+          <p>
+            Whether you're struggling with anxiety,
+            depression, trauma, ADHD, or simply
+            feeling overwhelmed, our team provides
+            compassionate, evidence-based care
+            tailored specifically to you.
+          </p>
+
+        </section>
+        {/* <BlankSpace /> */}
+
+        <BlankSpace height="50px" />
 
         <section className={styles.section1}>
           <ImageHero
@@ -20,14 +73,14 @@ export default function Home() {
           >
             <h1>Our North Gray Street location is now open!</h1>
             <p>
-              Thank you for your patience over the past year as we renovated our original building at 1103 North Gray Street. 
+              Thank you for your patience over the past year as we renovated our original building at 1103 North Gray Street.
               An official historic landmark, we hope its restoration will support a renewed sense of appreciation for downtown Killeen.
               Please go to 1103 N. Gray Street, Killeen TX 76541 for all in-person visits and inquiries. We are no longer at Jasper Drive.
             </p>
           </ImageHero>
         </section>
 
-        <BlankSpace/>
+        <BlankSpace />
 
         <section className={styles.section2}>
           <TwoItemBox>
@@ -55,7 +108,9 @@ export default function Home() {
           </TwoItemBox>
         </section>
 
-        <BlankSpace/>
+        <BlankSpace />
+
+        <GoogleMap/>
 
       </main>
     </div>

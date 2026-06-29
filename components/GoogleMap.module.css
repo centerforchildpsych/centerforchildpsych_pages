@@ -1,0 +1,18 @@
+.mapSection {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.mapSection iframe {
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  width: 75%;
+}
+
+.mapSection a{
+    color: rgb(131, 103, 61);
+    text-decoration: none;
+}

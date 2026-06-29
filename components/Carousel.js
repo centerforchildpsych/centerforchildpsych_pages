@@ -36,8 +36,6 @@ export default function Carousel({ slides = SAMPLE_SLIDES }) {
   const updateButtonStates = () => {
     const track = trackRef.current;
     if (!track) return;
-
-    const { scrollWidth, clientWidth } = track;
   };
 
   useEffect(() => {
@@ -116,12 +114,6 @@ export default function Carousel({ slides = SAMPLE_SLIDES }) {
                 alt={slide.title}
                 className={styles.slideImage}
               />
-{/* 
-              <div className={styles.slideCaption}>
-                <strong>{slide.title}</strong>
-                <br />
-                {slide.caption}
-              </div> */}
             </div>
           </li>
         ))}
