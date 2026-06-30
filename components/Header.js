@@ -1,11 +1,35 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./Header.module.css"
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [showButton, setShowButton] = useState(false);
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                setShowButton(true);
+            } else {
+                setShowButton(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
 
     return (
         <>
@@ -69,6 +93,12 @@ function Header() {
                         BOOK NOW
                     </Link>
                 </div>
+
+                {showButton && (
+                    <button className={styles.scrollTopBtn} onClick={scrollToTop}>
+                        <strong>^</strong>
+                    </button>
+                )}
 
             </div>
         </>
