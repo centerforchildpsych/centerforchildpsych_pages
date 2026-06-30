@@ -1,13 +1,14 @@
 .imageContainer {
   position: relative;
   width: 50%;
-  /* margin: 50px; */
 }
 
 .image {
   display: block;
   max-width: 800;
-  border: saddlebrown solid 1px;
+  border: rgba(223, 194, 174, 0.692) solid 1px;
+  background-color: rgb(241, 223, 200);
+  padding: 10px;
   border-radius: 15px;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -16,14 +17,14 @@
 .overlay {
   position: absolute;
   top: 50%;
-  left: 85%;
+  left: 100%;
   transform: translateY(-50%);
 
   background: rgba(255, 255, 255, 0.671);
   color: rgb(54, 45, 23);
 
   padding: 2rem;
-  border: solid rgba(203, 141, 69, 0.768) 1px;
+  /* border: solid rgba(203, 141, 69, 0.768) 1px; */
   border-radius: 12px;
   width: 400px;
 
@@ -46,15 +47,57 @@
   font-size: 1rem;
 }
 
-/* SMALL PHONES */
-@media (max-width: 500px) {
-  .overlay.textLeft {
-    left: 0;
-    top: 150%;
+/* Media query for mobile phones and tablets */
+@media screen and (max-width: 1024px) {
+
+  .imageContainer {
+    width: 100%;
+    /* Let container take full width on small screens */
+    margin: 0 auto 40px auto;
+    /* Center the container and add bottom spacing */
     display: flex;
+    flex-direction: column;
+    /* Force the image and overlay to stack vertically */
+    align-items: center;
+    /* Center align the elements */
   }
 
   .image {
-    max-width: 400px;
+    width: 100%;
+    /* Allow image to scale down with the screen size */
+    max-width: 450px;
+    /* Prevent image from getting too large on tablets */
+    height: auto;
+    /* Maintain proper aspect ratio */
+  }
+
+  .overlay,
+  .overlay.textLeft {
+    position: static;
+    /* Turn off absolute positioning */
+    transform: none;
+    /* Remove the desktop centering transform */
+    width: 100%;
+    /* Allow card to fill screen width safely */
+    max-width: 450px;
+    /* Match the width of the image for a clean look */
+    margin-top: -30px;
+    /* Pull card up slightly to overlap the bottom edge beautifully */
+    padding: 1.5rem;
+    /* Bring down padding slightly for small screens */
+    box-sizing: border-box;
+    /* Include padding in width math to prevent overflow */
+  }
+
+  .overlay h1,
+  .overlay h2 {
+    font-size: 1.6rem;
+    /* Step down the heading size slightly */
+    margin-bottom: 0.75rem;
+  }
+
+  .overlay p {
+    line-height: 1.6;
+    /* Tighten text slightly for better mobile reading */
   }
 }

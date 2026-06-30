@@ -3,7 +3,7 @@ import TwoItemBox from "@/components/TwoItemBox";
 import ImageHero from "@/components/ImageHero";
 import PageTransition from "@/components/PageTransition";
 import BlankSpace from "@/components/BlankSpace";
-import GoogleMap from "@/components/GoogleMap";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,13 +29,13 @@ export default function Home() {
             </p>
 
             <div className={styles.heroButtons}>
-              <button className={styles.primaryBtn}>
-                Book a Session
-              </button>
+              <Link className={styles.primaryBtn} href="https://consumer.scheduling.athena.io/?locationId=27185-1">
+                Book Now
+              </Link>
 
-              <button className={styles.secondaryBtn}>
+              <Link className={styles.secondaryBtn} href="/services">
                 Explore Services
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -43,11 +43,12 @@ export default function Home() {
             <img
               src="/photos/MomHoldingDaughter.png"
               alt="Mom Holding Daughter" />
+              <hr className={styles.hrLine}/>
           </div>
 
         </section>
 
-        {/* <hr className={styles.hrLine}/> */}
+        
         <section className={styles.intro}>
 
           <h2>You deserve care that sees the whole person.</h2>
@@ -61,27 +62,9 @@ export default function Home() {
           </p>
 
         </section>
-        {/* <BlankSpace /> */}
 
-        <BlankSpace height="50px" />
-
-        <section className={styles.section1}>
-          <ImageHero
-            image="/photos/buildingImage.png"
-            alt="Center for Child Psych logo"
-          // left={true}
-          >
-            <h1>Our North Gray Street location is now open!</h1>
-            <p>
-              Thank you for your patience over the past year as we renovated our original building at 1103 North Gray Street.
-              An official historic landmark, we hope its restoration will support a renewed sense of appreciation for downtown Killeen.
-              Please go to 1103 N. Gray Street, Killeen TX 76541 for all in-person visits and inquiries. We are no longer at Jasper Drive.
-            </p>
-          </ImageHero>
-        </section>
-
-        <BlankSpace />
-
+      <BlankSpace />
+      
         <section className={styles.section2}>
           <TwoItemBox>
             {/* First Child: Text Section */}
@@ -108,10 +91,26 @@ export default function Home() {
           </TwoItemBox>
         </section>
 
+         <BlankSpace/>
+
+        <section className={styles.section1}>
+          <ImageHero
+            image="/photos/buildingImage.png"
+            alt="Center for Child Psych logo"
+          // left={true}
+          >
+            <h1>Our North Gray Street location is now open!</h1>
+            <p>
+              Thank you for your patience over the past year as we renovated our original building at 1103 North Gray Street.
+              An official historic landmark, we hope its restoration will support a renewed sense of appreciation for downtown Killeen.
+              Please go to <a 
+              href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
+              >1103 North Gray Street Killeen, TX 76541
+              </a> for all in-person visits and inquiries. We are no longer at Jasper Drive. </p>
+          </ImageHero>
+        </section>
+
         <BlankSpace />
-
-        <GoogleMap/>
-
       </main>
     </div>
   );

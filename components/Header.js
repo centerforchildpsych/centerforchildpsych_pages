@@ -48,26 +48,26 @@ function Header() {
                         onClick={() => setMenuOpen(false)}>
                         About
                     </Link>
-                    <a className={styles.navBarLink} href="/providers"
+                    <Link className={styles.navBarLink} href="/providers"
                         onClick={() => setMenuOpen(false)}>
                         Our Providers
-                    </a>
-                    <a className={styles.navBarLink} href="/insurance"
+                    </Link>
+                    <Link className={styles.navBarLink} href="/insurance"
                         onClick={() => setMenuOpen(false)}>
                         Insurance & Billing
-                    </a>
-                    <a className={styles.navBarLink} href="/patientResources"
+                    </Link>
+                    <Link className={styles.navBarLink} href="/patientResources"
                         onClick={() => setMenuOpen(false)}>
                         Patient Resources
-                    </a>
-                    <a className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
+                    </Link>
+                    <Link className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
                         onClick={() => setMenuOpen(false)}>
                         Patient Portal
-                    </a>
-                    <a className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
+                    </Link>
+                    <Link className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
                         onClick={() => setMenuOpen(false)}>
                         BOOK NOW
-                    </a>
+                    </Link>
                 </div>
 
             </div>

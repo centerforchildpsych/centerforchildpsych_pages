@@ -9,6 +9,10 @@ export default function About() {
             <PageTransition />
 
             <BlankSpace height="100px" />
+            <div className={styles.heroTitle}>
+                <h1>Meet Dr. Andrey Shalomov</h1>
+                <p>Providing compassionate psychiatric care for children, adolescents, and adults throughout Central Texas.</p>
+            </div>
 
             <section className={styles.section1}>
                 <img className={styles.imageArch} src="/photos/bios/AndreyShalomov.png" alt="Andrey Shalomov" />
@@ -25,21 +29,14 @@ export default function About() {
             <section className={styles.section2}>
                 <div>
                     <p>
-                        Dr. Andrey Shalomov founded The Center for Child and Family Psychiatry,
-                        PC to help improve the mental health of adults and children in Killeen and other central Texas communities.
-                    </p>
-
-                    <BlankSpace height="25px" />
-
-                    <p>
-                        He is board-certified in both General (Adult) Psychiatry and Child & Adolescent Psychiatry.
+                        Dr. Andrey Shalomov is board-certified in both General (Adult) Psychiatry and Child & Adolescent Psychiatry.
                         He completed his residency at the University of Texas Rio Grande Valley and his
                         fellowship at the University of Texas Health Science Center at San Antonio.
                     </p>
                 </div>
             </section>
 
-            <BlankSpace height="200px" />
+            <BlankSpace height="100px" />
 
             <section className={styles.section3}>
                 <div>

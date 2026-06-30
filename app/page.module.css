@@ -1,6 +1,6 @@
 /* 
 The standard RGB code for beige is (245, 245, 220).
-Common Variations
+Some Variations
   Light Beige: (249, 246, 237)
   Dark Beige: (214, 199, 167)
   Tuscan Beige: (241, 230, 203) 
@@ -12,9 +12,17 @@ html {
 
 .section1 {
   display: flex;
-  /* flex-direction: row-reverse; */
-  justify-content: center;
-  margin-right: 350px;
+  margin-left: 200px;
+}
+
+.section1 a {
+  text-decoration: none;
+  color: #4b3b2a;
+  font-weight: 800;
+}
+
+.section1 a:hover {
+  text-decoration: underline;
 }
 
 .page {
@@ -31,13 +39,6 @@ html {
   border-top-left-radius: 50%;
   width: 500px;
 }
-
-/* @media screen and (max-width: 900px) {
-  .imageArc {
-    margin-top: 50px;
-    margin-left: 0px;
-  }
-} */
 
 
 
@@ -145,22 +146,51 @@ html {
 }
 
 .primaryBtn {
+  text-decoration: none;
   background: #8B7765;
   color: white;
   border: none;
   padding: 16px 28px;
   border-radius: 50px;
   cursor: pointer;
+  transition: 1s;
 }
 
 .secondaryBtn {
+  text-decoration: none;
   background: transparent;
   border: 1px solid #8B7765;
   color: #8B7765;
   padding: 16px 28px;
   border-radius: 50px;
   cursor: pointer;
+  transition: 1s;
 }
+
+/* ONLY apply hover effects on devices that actually have a mouse cursor */
+@media (hover: hover) {
+  .primaryBtn:hover {
+    background: #64564a;
+    color: rgb(183, 177, 177);
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+  .secondaryBtn:hover {
+    background-color: #ded2c86d;
+    border: 1px solid #605043;
+    color: #675748;
+    transform: scale(1.1);
+    transition: 1s;
+  }
+}
+
+.primaryBtn:active {
+  background: #52463c;
+  transform: scale(0.98);
+}
+
+
 
 /* second section */
 .intro {
@@ -168,28 +198,86 @@ html {
   text-align: center;
   padding: 100px 8%;
   background: #EDE4D8;
-  text-align: center;
   font-family: 'Inter', sans-serif;
   color: #5B4F44;
   line-height: 1.7;
 }
+
 .intro p {
   max-width: 800px;
   margin: auto;
   font-size: 1.2rem;
 }
-.intro h2{
-  font-family: 'Cormorant Garamond',serif;
+
+.intro h2 {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 3rem;
   margin-bottom: 30px;
   font-weight: 100;
 }
 
 .hrLine {
+  margin-top: 20px;
   border: none;
-  /* Removes default browser border/shadow */
-  height: 1px;
-  /* Sets the thickness (adjust as needed) */
+  height: 3px;
   background-color: #6d5425;
-  /* Sets the color of the line */
+}
+
+
+/* Media query for mobile phones and tablets */
+@media screen and (max-width: 1024px) {
+
+  /* Reset massive desktop margins */
+  .section1 {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Scale down the rigid 500px width */
+  .imageArc {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+  }
+
+  /* Stack layout elements vertically instead of horizontally */
+  .textSection {
+    flex-direction: column;
+    border-right: #8b6b4a solid 1px;
+    /* Restore the border on mobile */
+    padding: 20px;
+  }
+
+  /* Convert 2-column grid into 1-column layout for Hero section */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 5%;
+    min-height: auto;
+  }
+
+  /* Prevent text from overflowing the screen */
+  .hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  /* Stack buttons vertically on very narrow screens if needed */
+  .heroButtons {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+  }
+
+  /* Prevent the hero image from stretching unnaturally */
+  .heroImage img {
+    height: 400px;
+    border-radius: 12px;
+    /* Optional: adds a nice modern touch to mobile images */
+  }
 }

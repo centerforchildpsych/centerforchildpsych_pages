@@ -1,0 +1,24 @@
+.header{
+    margin: 100px;
+    margin-bottom: 20px;
+    color: #4b3b2a;
+}
+
+.servicesContainer{
+    margin: 100px;
+    margin-top: 0;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgb(214, 199, 167), rgb(249, 246, 237));
+    padding: 50px;
+    border: solid 1px rgb(135, 105, 65);
+}
+
+.servicesContainer div{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #4b3b2a;
+}

@@ -1,53 +1,193 @@
-.section1 {
-    display: flex;
-    justify-content: center;
-    margin-left: 50px;
-    gap: 100px;
-}
-.section1 div{
-    display: flex;
-    align-items: center;
-    justify-content: center; /* center the p horizontally */
-    line-height: 1.8;  /* or 30px, etc. */
-    width: 350px;
-    background-color: rgba(250, 235, 215, 0.716);
-    border: solid saddlebrown 1px;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-}
-.section1 div p {
+
+/* ---------- HERO ---------- */
+
+.heroTitle {
     text-align: center;
-    width: 150px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.section2 {
-    display: flex;
-    flex-direction: column;
-    border: solid saddlebrown 1px;
-    background-color: aliceblue;
-}
-.section2 div{
-    margin: 20px 200px 20px 200px;
-    
+.heroTitle h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: rgb(101, 65, 38);
+    margin-bottom: 1rem;
+    letter-spacing: -2px;
 }
 
-.section3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.heroTitle p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #5d4a3a;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* ---------- SECTION 1 ---------- */
+
+.section1 {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 5rem;
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 4rem;
     align-items: center;
-    gap: 20px;
-    border: solid saddlebrown 1px;
-    
-}
-.section3 div{
-    margin: 20px 500px 20px 500px;
 }
 
 .imageArch {
-    width: 25%;
-    border: saddlebrown solid 1px;
-    border-radius: 15px;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.12);
+}
+
+.section1 div {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.section1 div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: saddlebrown;
+    border-radius: 10px;
+}
+
+.section1 p {
+    font-size: 1.25rem;
+    line-height: 2;
+    color: #3d3126;
+}
+
+
+/* ---------- SECTION 2 ---------- */
+
+.section2 {
+    /* max-width: 1100px; */
+    margin: auto;
+    padding: 6rem;
+
+    /* background: linear-gradient(
+        135deg,
+        #faf5ee,
+        #f4efe7
+    ); */
+    background-color: #64503e84;
+
+    /* border-radius: 24px; */
+
+    /* box-shadow: 0 20px 40px rgba(0,0,0,.08); */
+}
+
+.section2 p {
+    font-family: Cormorant Garamond, serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: #ffffff;
+    margin: 10px 200px 10px 200px;
+}
+
+
+/* ---------- SECTION 3 ---------- */
+
+.section3 {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.section3 div {
+    background: white;
+
+    padding: 3rem;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.08);
+
+    border-top: 6px solid saddlebrown;
+}
+
+.section3 h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: saddlebrown;
+
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+.section3 h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+
+    padding: 1rem 0;
+
+    color: #3d3126;
+
+    border-bottom: 1px solid rgba(139,69,19,.15);
+}
+
+.section3 h3 {
+    margin-top: 2rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: #6a5849;
+
+    text-align: center;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 950px) {
+    .section1 {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+
+    .imageArch {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .section1 div {
+        padding-left: 0;
+    }
+
+    .section1 div::before {
+        display: none;
+    }
+
+    .section2 {
+        margin: 0 1rem;
+        padding: 2rem;
+    }
+
+    .section3 {
+        padding: 0 1rem;
+    }
+
+    .section3 div {
+        padding: 2rem;
+    }
 }

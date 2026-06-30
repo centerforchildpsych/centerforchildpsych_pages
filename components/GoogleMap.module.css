@@ -1,9 +1,11 @@
 .mapSection {
-  max-width: 1200px;
-  margin: 0 auto 50px;
+  padding: 50px;
   display: flex;
   align-items: center;
   gap: 150px;
+  background: #ede4d8;
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: none;
 }
 
 .mapSection iframe {
@@ -12,7 +14,71 @@
   width: 75%;
 }
 
-.mapSection a{
-    color: rgb(131, 103, 61);
-    text-decoration: none;
+.mapSection .textContainer a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 30px;
+  color: #5b4f44;
+  transition: 1s;
+}
+
+.mapSection .textContainer a:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.mapSection .textContainer h3,
+.mapSection .textContainer p  {
+  font-size: 1.5rem;
+  color: #5b4f44;
+}
+
+
+.mapSection .textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Media query for mobile phones and tablets */
+@media screen and (max-width: 1024px) {
+
+  .mapSection {
+    flex-direction: column;
+    /* Stack the map and text vertically */
+    gap: 40px;
+    /* Reduce the massive 150px gap */
+    padding: 40px 20px;
+    /* Reduce padding so content doesn't get squished */
+    text-align: center;
+    /* Center-align the text elements */
+  }
+
+  .mapSection iframe {
+    width: 100%;
+    /* Allow map to take full width of mobile screens */
+    height: 350px;
+    /* Give it a fixed, usable height on mobile */
+    border-radius: 20px;
+    /* Slightly soften the heavy radius for smaller screens */
+  }
+
+  .mapSection .textContainer {
+    width: 100%;
+    /* Ensure text container uses available width */
+  }
+
+  .mapSection .textContainer a {
+    font-size: 1.6rem;
+    /* Scale down the massive 2rem link text */
+    margin: 15px 0;
+    /* Adjust margins for vertical stack layout */
+  }
+
+  .mapSection .textContainer h3,
+  .mapSection .textContainer p {
+    font-size: 1.2rem;
+    /* Reduce text size slightly so it fits mobile screens nicely */
+  }
 }
