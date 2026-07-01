@@ -1,0 +1,112 @@
+.searchContainer {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.searchInput {
+    width: 70%;
+    padding: 1rem 1.25rem;
+    border: 1px solid #e4d6c3;
+    border-radius: 12px;
+    font-size: 2rem;
+    background: white;
+    outline: none;
+    border-color: #7b6752;
+    box-shadow: 0 0 0 3px rgba(78, 66, 66, 0.15);
+    color: #4b3f32;
+}
+
+.searchInput:focus {
+    border-color: #342a20;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown {
+    width: 70%;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: calc(15%);
+    right: 0;
+    background: white;
+    border: 1px solid #e4d6c3;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(72, 62, 37, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    color: #4b3f32;
+}
+
+.dropdownItem {
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.dropdownItem:hover {
+    background: #f5efe6;
+}
+
+.selectedInsurance {
+    background: #d8e8d6 !important;
+    border: 2px solid #4f8a4d !important;
+    box-shadow: 0 0 0 3px rgba(79, 138, 77, 0.15);
+    transform: translateY(-2px);
+}
+
+.subtitle {
+    color: #7a6a58;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.card{
+    color: #4b3f32;
+    /* font-size: 1.8rem; */
+    margin-bottom: 0.5rem;
+    background: #fffdf9;
+    border-radius: 18px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow:
+        0 8px 25px rgba(100, 80, 50, 0.08),
+        0 2px 8px rgba(100, 80, 50, 0.04);
+    border: 1px solid #ece2d5;
+}
+.insuranceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+.insuranceItem {
+    background: #f5efe6;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #e4d6c3;
+    color: #4b3f32;
+    font-weight: 500;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.insuranceItem:hover {
+    transform: translateY(-2px);
+    background: #efe6d8;
+    box-shadow: 0 6px 18px rgba(100, 80, 50, 0.12);
+}
+
+
+
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem 1.5rem;
+    }
+
+    .insuranceGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,7 +1,8 @@
 import PageTransition from "@/components/PageTransition";
 import styles from "./page.module.css";
+import InsuranceSearch from "./InsuranceSearch";
 
-export default function Insurance() {
+export default function Test() {
     const acceptedInsurance = [
         "AARP",
         "Aetna HMO",
@@ -13,14 +14,14 @@ export default function Insurance() {
         "Baylor Scott & White RightCare",
         "Baylor Scott & White FirstCare",
         "Blue Cross Blue Shield TX Star and CHIP",
-        "BCBS PAR – PAR Plan",
-        "BCBS BCP – Blue Choice PPO",
-        "BCBS HMO – Blue Essentials",
-        "BCBS HME – HealthSelect of Texas®",
-        "BCBS HMH – Blue Premier",
-        "BCBS HPN – Blue High Performance Network",
-        "BCBS PPO – Blue Cross Medicare Advantage",
-        "BCBS PMB – Medicare Advantage PPO (BH)",
+        "BCBS PAR - PAR Plan",
+        "BCBS BCP - Blue Choice PPO",
+        "BCBS HMO - Blue Essentials",
+        "BCBS HME - HealthSelect of Texas®",
+        "BCBS HMH - Blue Premier",
+        "BCBS HPN - Blue High Performance Network",
+        "BCBS PPO - Blue Cross Medicare Advantage",
+        "BCBS PMB - Medicare Advantage PPO (BH)",
         "Cigna",
         "Curative",
         "Dell Children's Health Plan",
@@ -65,7 +66,6 @@ export default function Insurance() {
     return (
         <>
             <PageTransition />
-
             <main className={styles.container}>
                 <section className={styles.hero}>
                     <h1>Insurance & Billing</h1>
@@ -75,23 +75,7 @@ export default function Insurance() {
                     </p>
                 </section>
 
-                <section className={styles.card}>
-                    <h2>Accepted Insurance Plans</h2>
-                    <p className={styles.subtitle}>
-                        Insurance providers are listed alphabetically.
-                    </p>
-
-                    <div className={styles.insuranceGrid}>
-                        {acceptedInsurance.map((insurance) => (
-                            <div
-                                key={insurance}
-                                className={styles.insuranceItem}
-                            >
-                                {insurance}
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                <InsuranceSearch acceptedInsurance={acceptedInsurance} />
 
                 <section className={styles.card}>
                     <h2>Coming Soon</h2>
