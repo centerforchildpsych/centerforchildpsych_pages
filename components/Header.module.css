@@ -13,133 +13,129 @@
   color: #3e3124;
   text-align: center;
   padding: 12px;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
 /* HEADER */
-.navBarLink {
-  padding-top: 0px;
-  margin-top: 0px;
-  font-size: 1.2rem;
-}
-
 .scrollngHeader {
   width: 100%;
-  height: 150px;
+  min-height: 100px;
   background: rgb(245, 239, 229);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 125px 0px 125px;
-  border-bottom: #3e3124 solid 1px;
+  padding: 12px clamp(20px, 5vw, 80px);
+  border-bottom: 1px solid #3e3124;
+  gap: 20px;
 }
 
 .imageLogo {
-  width: 300px;
+  width: clamp(160px, 22vw, 250px);
+  height: auto;
   object-fit: contain;
-}
-
-.navButton {
-  color: inherit;
-  text-decoration: none;
-  padding: 20px;
-  background-color: rgba(109, 172, 255, 0.793);
-  transition: 0.25s ease;
-  margin-left: 50px;
-  font-size: larger;
-}
-
-.navButton:hover {
-  background-color: rgba(141, 186, 246, 0.793);
-  transition: 0.25s ease;
+  flex-shrink: 0;
 }
 
 /* container for nav bar links */
 .navLinks {
   display: flex;
-  gap: 20px;
+  gap: clamp(10px, 2vw, 25px);
   align-items: center;
+  flex-wrap: wrap;
 }
-
 
 /* each link on nav bar */
 .navBarLink {
   text-decoration: none;
   color: #5c4b3a;
   transition: 0.25s ease;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   position: relative;
+  white-space: nowrap;
 }
 
 .navBarLink:hover {
   color: #8b6b4a;
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.navButton {
+  color: inherit;
+  text-decoration: none;
+  padding: 12px 20px;
+  background-color: rgba(109, 172, 255, 0.793);
   transition: 0.25s ease;
+  margin-left: 15px;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.navButton:hover {
+  background-color: rgba(141, 186, 246, 0.793);
 }
 
 /* HAMBURGER */
 .hamburger {
   display: none;
-  font-size: 34px;
+  font-size: 2rem;
   cursor: pointer;
   color: #8b6b4a;
 }
 
 /* SCROLL BUTTON */
-
 .scrollTopBtn {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 15px;
-  padding-bottom: 10px;
-  font-size: 22px;
+  bottom: 25px;
+  right: 25px;
+  width: 52px;
+  height: 52px;
   border: none;
-  border-radius: 100px;
+  border-radius: 50%;
   cursor: pointer;
   background: linear-gradient(to right, #857e72, #5c5548);
   color: white;
+  font-size: 1.2rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   transition: 0.3s ease;
   z-index: 1000;
 }
 
 .scrollTopBtn:hover {
-  transform: translateY(-5px) scale(1.2);
+  transform: translateY(-3px) scale(1.1);
 }
 
+/* TABLETS */
 @media (max-width: 900px) {
   .scrollngHeader {
-    padding: 10px;
-    height: 100px;
+    padding: 12px 20px;
+    min-height: 90px;
     position: relative;
     z-index: 1001;
+  }
+
+  .imageLogo {
+    width: 180px;
   }
 
   .hamburger {
     display: block;
     position: fixed;
-    top: 45px;
-    right: 25px;
+    top: 28px;
+    right: 20px;
     z-index: 1002;
   }
-
 
   .navLinks {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     background: #f5efe5;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-
+    gap: 24px;
     z-index: 1000;
   }
 
@@ -148,17 +144,36 @@
   }
 
   .navBarLink {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .navButton {
-    margin-left: 0px;
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
 
 /* SMALL PHONES */
 @media (max-width: 500px) {
   .scrollngHeader {
-    padding: 10px;
+    padding: 10px 15px;
+  }
+
+  .imageLogo {
+    width: 140px;
+  }
+
+  .hamburger {
+    top: 22px;
+    right: 15px;
+    font-size: 1.8rem;
+  }
+
+  .scrollTopBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+    bottom: 20px;
+    right: 20px;
   }
 }

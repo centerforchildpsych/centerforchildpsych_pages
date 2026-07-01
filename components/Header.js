@@ -84,6 +84,10 @@ function Header() {
                         onClick={() => setMenuOpen(false)}>
                         Patient Resources
                     </Link>
+                    <Link className={styles.navBarLink} href="/tms"
+                        onClick={() => setMenuOpen(false)}>
+                        TMS
+                    </Link>
                     <Link className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
                         onClick={() => setMenuOpen(false)}>
                         Patient Portal
