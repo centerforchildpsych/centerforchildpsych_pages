@@ -10,18 +10,19 @@ html {
   scroll-behavior: smooth;
 }
 
-.section1 {
+.buildingInfo {
   display: flex;
   margin-left: 200px;
+  margin-bottom: 100px;
 }
 
-.section1 a {
+.buildingInfo a {
   text-decoration: none;
   color: #4b3b2a;
   font-weight: 800;
 }
 
-.section1 a:hover {
+.buildingInfo a:hover {
   text-decoration: underline;
 }
 
@@ -41,6 +42,27 @@ html {
 }
 
 
+
+/* Quiz section */
+.quiz{
+    background:#E6DCCF;
+}
+.quizBox{
+    margin: 100px 0 100px 0;
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+.quizBox h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    margin-bottom:30px;
+}
+.quizBox p{
+    font-family:'Cormorant Garamond',serif;
+    font-size: 2rem;
+    margin-bottom:30px;
+}
+/*  */
 
 /* test list items */
 .textItems {
@@ -156,6 +178,12 @@ html {
   transition: 1s;
 }
 
+.primaryBtn:active {
+  background: #52463c;
+  transform: scale(0.98);
+}
+
+
 .secondaryBtn {
   text-decoration: none;
   background: transparent;
@@ -165,6 +193,37 @@ html {
   border-radius: 50px;
   cursor: pointer;
   transition: 1s;
+}
+
+
+.parallelTextImage{
+  margin: 100px 0 100px 0;
+}
+.tmsParallelBlock{
+  margin: 100px 0 100px 0;
+}
+.tmsParallelBlock h2{
+  color: #4b3b2a;
+  padding: 30px;
+  border-top: #4b3b2a solid 1px;
+  text-align: center;
+}
+.tmsParallelBlock .textItems p{
+  color: #4b3b2a;
+  padding: 0 150px 50px 150px;
+  line-height: 2.5;
+}
+.tmsParallelBlock .textItems h3{
+  color: #4b3b2a;
+  padding: 150px 150px 0 100px;
+  line-height: 3.5;
+}
+.tmsParallelBlock .primaryBtn{
+  display: inline-block;
+  text-align: center;
+  margin: 50px;
+  padding: 5px;
+  width: 200px;
 }
 
 /* ONLY apply hover effects on devices that actually have a mouse cursor */
@@ -184,13 +243,6 @@ html {
     transition: 1s;
   }
 }
-
-.primaryBtn:active {
-  background: #52463c;
-  transform: scale(0.98);
-}
-
-
 
 /* second section */
 .intro {
@@ -228,7 +280,7 @@ html {
 @media screen and (max-width: 1024px) {
 
   /* Reset massive desktop margins */
-  .section1 {
+  .buildingInfo {
     margin-right: 0;
     flex-direction: column;
     align-items: center;

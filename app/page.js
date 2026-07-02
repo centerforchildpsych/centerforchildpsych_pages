@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import TwoItemBox from "@/components/TwoItemBox";
 import ImageHero from "@/components/ImageHero";
 import PageTransition from "@/components/PageTransition";
-import BlankSpace from "@/components/BlankSpace";
+// import BlankSpace from "@/components/BlankSpace";
 import Link from "next/link";
 
 export default function Home() {
@@ -11,10 +11,7 @@ export default function Home() {
       <main className={styles.main}>
         <PageTransition />
 
-        {/* <BlankSpace /> */}
-
         <section className={styles.hero}>
-
           <div className={styles.heroText}>
             <h1>
               Compassionate Care
@@ -43,14 +40,12 @@ export default function Home() {
             <img
               src="/photos/MomHoldingDaughter.png"
               alt="Mom Holding Daughter" />
-              <hr className={styles.hrLine}/>
+            <hr className={styles.hrLine} />
           </div>
-
         </section>
 
-        
-        <section className={styles.intro}>
 
+        <section className={styles.intro}>
           <h2>You deserve care that sees the whole person.</h2>
 
           <p>
@@ -60,12 +55,11 @@ export default function Home() {
             compassionate, evidence-based care
             tailored specifically to you.
           </p>
-
         </section>
 
-      <BlankSpace />
-      
-        <section className={styles.section2}>
+        {/* <BlankSpace /> */}
+
+        <section className={styles.parallelTextImage}>
           <TwoItemBox>
             {/* First Child: Text Section */}
             <div className={styles.textSection}>
@@ -91,9 +85,52 @@ export default function Home() {
           </TwoItemBox>
         </section>
 
-         <BlankSpace/>
+        {/* <BlankSpace/> */}
 
-        <section className={styles.section1}>
+        <section className={styles.quiz}>
+          <div className={styles.quizBox}>
+            <h2>Not Sure Where To Start?</h2>
+            <p>
+              Take our brief wellness questionnaire
+              to discover which services may best
+              fit your needs.
+            </p>
+            <button className={styles.primaryBtn}>
+              Take The Quiz
+            </button>
+          </div>
+        </section>
+
+        <section className={styles.tmsParallelBlock}>
+          <h2>Now offering TMS</h2>
+          <TwoItemBox>
+            {/* First Child: Text Section */}
+            <div className={styles.imageSection}>
+              <img
+                src="/photos/TMS_Patient.png"
+                alt="TMS Patient and Docter"
+              />
+            </div>
+
+            {/* Second Child: Image Section */}
+            <div className={styles.textSection}>
+              <div className={styles.textItems}>
+                <h3>Treat Depression at the Source</h3>
+                <p>NeuroStar TMS(Transcranial Magnetic Stimulation) goes right to the source
+                  of depression - your brain. It is a non-invasive, non-drug treatment that
+                  uses focused magnetic pulses to "wake up" those areas, and help your brain work
+                  the way it should. It's like physical therapy for your brain.
+                  <Link className={styles.primaryBtn} href="/tms">
+                    TMS
+                  </Link>
+                </p>
+
+              </div>
+            </div>
+          </TwoItemBox>
+        </section>
+
+        <section className={styles.buildingInfo}>
           <ImageHero
             image="/photos/buildingImage.png"
             alt="Center for Child Psych logo"
@@ -103,14 +140,14 @@ export default function Home() {
             <p>
               Thank you for your patience over the past year as we renovated our original building at 1103 North Gray Street.
               An official historic landmark, we hope its restoration will support a renewed sense of appreciation for downtown Killeen.
-              Please go to <a 
-              href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
+              Please go to <a
+                href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
               >1103 North Gray Street Killeen, TX 76541
               </a> for all in-person visits and inquiries. We are no longer at Jasper Drive. </p>
           </ImageHero>
         </section>
 
-        <BlankSpace />
+        {/* <BlankSpace /> */}
       </main>
     </div>
   );
