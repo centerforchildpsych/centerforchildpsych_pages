@@ -22,14 +22,6 @@ export default function Providers() {
             </section>
 
             <BlankSpace />
-
-            {/* <section className={styles.section1}>
-                <main style={{ padding: "2rem" }}>
-                    <Rotator items={mixedSlides} />
-                    <Rotator items={["Thoughtful providers", "A better you"]} interval={1500} />
-                </main>
-                <h1 style={{ height: "500px", margin: "50px" }}>Provider Profiles</h1>
-            </section> */}
         </>
     );
 }

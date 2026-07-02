@@ -7,7 +7,7 @@ import styles from "./Header.module.css"
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showButton, setShowButton] = useState(false);
-    
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 300) {
@@ -64,10 +64,6 @@ function Header() {
                     <Link className={styles.navBarLink} href="/" onClick={() => setMenuOpen(false)}>
                         Home
                     </Link>
-                    <a className={styles.navBarLink} href="/services"
-                        onClick={() => setMenuOpen(false)}>
-                        Services
-                    </a>
                     <Link className={styles.navBarLink} href="/about"
                         onClick={() => setMenuOpen(false)}>
                         About
@@ -89,10 +85,12 @@ function Header() {
                         TMS
                     </Link>
                     <Link className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
+                        target="_blank" rel="noopener noreferrer"
                         onClick={() => setMenuOpen(false)}>
                         Patient Portal
                     </Link>
                     <Link className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
+                        target="_blank" rel="noopener noreferrer"
                         onClick={() => setMenuOpen(false)}>
                         BOOK NOW
                     </Link>
