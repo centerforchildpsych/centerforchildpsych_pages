@@ -6,6 +6,7 @@
 
 @media screen and (max-width: 900px) {
   .twoBoxPanel {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -10,6 +10,7 @@
   opacity: 1;
   transition: opacity .7s ease;
 }
+
 .screenOverlay.fadeOut {
   opacity: 0;
   pointer-events: none;
@@ -18,4 +19,11 @@
 .imageLogo {
   width: 800px;
   object-fit: contain;
+}
+
+
+@media (max-width: 500px) {
+  .imageLogo {
+    width: 300px;
+  }
 }

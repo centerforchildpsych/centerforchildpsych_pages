@@ -82,6 +82,9 @@
   font-size: 2rem;
   cursor: pointer;
   color: #8b6b4a;
+  background-color: #efe8dfb8;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /* SCROLL BUTTON */

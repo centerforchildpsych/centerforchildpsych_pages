@@ -487,6 +487,17 @@ html {
 /* Mobile responsiveness */
 @media screen and (max-width: 1024px) {
 
+  .tmsParallelBlock .textItems h2 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .tmsParallelBlock .textItems h4 {
+    text-align: center;
+    display: flex;
+  }
+
   .reviewGrid,
   .blogGrid {
     grid-template-columns: 1fr;
