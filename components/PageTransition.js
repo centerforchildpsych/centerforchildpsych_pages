@@ -18,7 +18,7 @@ export default function PageTransition() {
         <div className={`${styles.screenOverlay} ${fade ? styles.fadeOut : ""}`} >
             <img
                 className={styles.imageLogo}
-                src='./photos/ChildCenterImg.png'
+                src='/photos/ChildCenterImg.png'
                 alt='The Center for Child and Family Psychiatry, PC'
             />
         </div>
