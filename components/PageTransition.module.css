@@ -11,7 +11,7 @@
   transition: opacity .7s ease;
 }
 
-.screenOverlay.fadeOut {
+.fadeOut {
   opacity: 0;
   pointer-events: none;
 }
