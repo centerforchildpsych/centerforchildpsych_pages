@@ -62,7 +62,7 @@
     line-height: 1.6;
 }
 
-.card{
+.card {
     color: #4b3f32;
     /* font-size: 1.8rem; */
     margin-bottom: 0.5rem;
@@ -75,11 +75,13 @@
         0 2px 8px rgba(100, 80, 50, 0.04);
     border: 1px solid #ece2d5;
 }
+
 .insuranceGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
 }
+
 .insuranceItem {
     background: #f5efe6;
     padding: 1rem 1.25rem;
@@ -108,5 +110,9 @@
 
     .insuranceGrid {
         grid-template-columns: 1fr;
+    }
+
+    .searchInput {
+        font-size: 1rem;
     }
 }

@@ -41,11 +41,21 @@ export default function About() {
             <section className={styles.section3}>
                 <div>
                     <h2>Clinic Information</h2>
-                    <h4>CLINIC ADDRESS: 400 West Jasper Drive | Killeen, TX | 76541</h4>
-                    <h4><strong>EMAIL:</strong> centerforchildpsych@gmail.com</h4>
-                    <h4><strong>PHONE:</strong> 254-774-1163</h4>
-                    <h4><strong>FAX:</strong> 833-464-5455</h4>
-                    <h3>Our business address (for mail/correspondence): 1103 N. Gray Street | Killeen, TX | 76541</h3>
+                    <h4>CLINIC ADDRESS: <a href="https://www.google.com/maps/place/400+W+Jasper+Dr,+Killeen,+TX+76542/"
+                        target="_blank" rel="noopener noreferrer">400 West Jasper Drive | Killeen, TX | 76541</a></h4>
+                    <h4>
+                        <strong>EMAIL:</strong> <a
+                            href="mailto:centerforchildpsych@gmail.com"
+                            className={styles.emailLink}
+                        >
+                            centerforchildpsych@gmail.com
+                        </a>
+                    </h4>
+                    <h4><strong>PHONE:</strong> <a href="tel:+12547741163">(254) 774-1163</a></h4>
+                    <h4><strong>FAX:</strong> <a href="tel:+18334645455">833-464-5455</a></h4>
+                    <h3>Our business address (for mail/correspondence): <a href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
+                        target="_blank" rel="noopener noreferrer">1103 N. Gray Street | Killeen, TX | 76541</a>
+                    </h3>
                 </div>
             </section>
 

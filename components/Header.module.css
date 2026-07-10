@@ -1,3 +1,12 @@
+.easeyStyle a {
+  text-decoration: none;
+  color: #5c4b3a;
+}
+.easeyStyle a:hover {
+  text-decoration: underline;
+  color: #2d2115;
+}
+
 .emailLink {
   color: inherit;
   text-decoration: underline;
@@ -30,8 +39,31 @@
   gap: 20px;
 }
 
+.logoContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollngHeader a {
+    color: inherit;
+    text-decoration: none;
+    font-size: .9rem;
+}
+.scrollngHeader p {
+    color: inherit;
+    font-size: .9rem;
+}
+
+.scrollngHeader a:hover {
+    text-decoration: underline;
+}
+
+
 .imageLogo {
-  width: clamp(160px, 22vw, 250px);
+  width: clamp(300px, 22vw, 250px);
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -119,7 +151,7 @@
   }
 
   .imageLogo {
-    width: 180px;
+    width: 100%;
   }
 
   .hamburger {
@@ -163,7 +195,7 @@
   }
 
   .imageLogo {
-    width: 140px;
+    width: 100%;
   }
 
   .hamburger {

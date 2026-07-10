@@ -24,8 +24,8 @@ export default function GoogleMap() {
                     Killeen, TX 76541</a>
 
                 <h3>Contact:</h3>
-                <p>(254) 774-1163<br />
-                    (833) 464-5455</p>
+                <p><a href="tel:+12547741163">(254) 774-1163</a><br />
+                    <a href="tel:+18334645455">833-464-5455</a></p>
 
                 <a
                     className="footerLink"

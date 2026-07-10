@@ -22,17 +22,17 @@
   transition: 1s;
 }
 
-.mapSection .textContainer a:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
 .mapSection .textContainer h3,
 .mapSection .textContainer p  {
   font-size: 1.5rem;
   color: #5b4f44;
 }
 
+.mapSection .textContainer a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition: 1s;
+}
 
 .mapSection .textContainer {
   display: flex;

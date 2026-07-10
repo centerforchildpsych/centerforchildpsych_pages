@@ -34,7 +34,10 @@ function Header() {
     return (
         <>
             <p className={styles.easeyStyle}>
-                1103 N. Gray Street | Killeen, TX 76541 | (254) 774-1163 |{" "}
+                <a href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
+                    target="_blank" rel="noopener noreferrer">1103 N. Gray Street | Killeen, TX 76541</a>  
+                {" "}|{" "}
+                <a href="tel:+12547741163">(254) 774-1163</a> |{" "}
                 <a
                     href="mailto:centerforchildpsych@gmail.com"
                     className={styles.emailLink}
@@ -45,12 +48,12 @@ function Header() {
 
             <div className={styles.scrollngHeader}>
 
-                <div>
+                <div className={styles.logoContainer}>
                     <img
                         className={styles.imageLogo}
                         src='./photos/ChildCenterImg.png'
                         alt='The Center for Child and Family Psychiatry, PC'
-                    /><p>PHONE: (254) 774-1163 | FAX: 833-464-5455</p>
+                    /><p>PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a></p>
                 </div>
 
 
