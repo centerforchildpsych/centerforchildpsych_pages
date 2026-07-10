@@ -485,7 +485,7 @@ html {
 }
 
 /* Mobile responsiveness */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
 
   .tmsParallelBlock .textItems h2 {
     text-align: center;
@@ -495,7 +495,9 @@ html {
 
   .tmsParallelBlock .textItems h4 {
     text-align: center;
-    display: flex;
+    padding: 0;
+    margin-left: 130px;
+    margin-right: 130px;
   }
 
   .reviewGrid,
