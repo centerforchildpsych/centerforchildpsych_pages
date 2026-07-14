@@ -66,6 +66,9 @@
 
 .scrollngHeader a:hover {
     text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+    color: var(--accent-purple-dark);
 }
 
 

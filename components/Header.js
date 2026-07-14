@@ -49,11 +49,14 @@ function Header() {
             <div className={styles.scrollngHeader}>
 
                 <div className={styles.logoContainer}>
-                    <img
+                    <Link  href="/">
+                        <img
                         className={styles.imageLogo}
                         src='./photos/ChildCenterImg.png'
                         alt='The Center for Child and Family Psychiatry, PC'
-                    /><p>PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a></p>
+                    />
+                    </Link>
+                    <p>PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a></p>
                 </div>
 
 
