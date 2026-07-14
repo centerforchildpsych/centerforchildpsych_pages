@@ -1,6 +1,6 @@
 .easeyStyle {
-  background: linear-gradient(to right, #b89b72, #d8c3a5);
-  color: #3e3124;
+  background: var(--teal-green);
+  color: #ffffff;
   text-align: center;
   padding: 12px;
   font-size: 14px;

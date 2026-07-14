@@ -1,6 +1,78 @@
-html {
-  height: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap");
+
+:root {
+  /* =========================
+     Fonts
+  ========================= */
+
+  --font-heading: "Fraunces", serif;
+  --font-body: "Public Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+
+  /* =========================
+     Brand Blues
+  ========================= */
+
+  --brand-blue-deep: #2F5770;
+  --brand-blue-mid: #6C9BB8;
+  --brand-blue-logo: #4A85AD;
+  --brand-blue-exact: #7AADCF;
+
+
+  /* =========================
+     Banner + Footer
+  ========================= */
+
+  --dark-teal: #24424B;
+
+
+  /* =========================
+     Rainbow Accent Colors
+  ========================= */
+
+  --accent-purple: #8B6F94;
+  --accent-purple-dark: #6a5471;
+  --accent-sage: #6E8C5F;
+  --accent-sage-dark: #4d6142;
+  --accent-yellow: #D9A441;
+  --accent-navy: #33455C;
+
+
+  /* =========================
+     Neutrals
+  ========================= */
+
+  --cream: #F7F3EA;
+  --sand: #ebe0c964;
+  /* --sand: #EBE0C9; */
+  --paper: #FFFDF9;
+
+  --ink: #2B2A27;
+  --body-gray: #4A4944;
+  --muted-gray: #8A8A80;
+
+  --teal-green: #24424B; 
+
+  --border: rgba(47, 87, 112, 0.14);
+
+
+  /* =========================
+     Common UI
+  ========================= */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 8px 24px rgba(47, 87, 112, 0.08);
 }
+
+
+/* =========================
+   Global Reset
+========================= */
+
 
 html,
 body {
@@ -12,14 +84,50 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: rgb(245, 239, 229);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  /* background: var(--cream);
+
+  font-family: var(--font-body);
+  color: var(--ink); */
+
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
+
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+
+/* =========================
+   Default Typography
+========================= */
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--brand-blue-deep);
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--body-gray);
+}
+
+button {
+  font-family: var(--font-mono);
+}
+
+label,
+.small-text,
+.role-label {
+  font-family: var(--font-mono);
+  color: var(--muted-gray);
+} */

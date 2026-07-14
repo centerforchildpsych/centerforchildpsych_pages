@@ -1,10 +1,10 @@
 .easeyStyle a {
   text-decoration: none;
-  color: #5c4b3a;
+  color: #ffffff;
 }
 .easeyStyle a:hover {
   text-decoration: underline;
-  color: #2d2115;
+  color: #ffffff;
 }
 
 .emailLink {
@@ -18,8 +18,8 @@
 }
 
 .easeyStyle {
-  background: linear-gradient(to right, #b89b72, #d8c3a5);
-  color: #3e3124;
+  background: var(--teal-green);
+  color: #ffffff;
   text-align: center;
   padding: 12px;
   font-size: 0.9rem;
