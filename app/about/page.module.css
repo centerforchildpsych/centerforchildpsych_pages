@@ -10,7 +10,8 @@
 .heroTitle h1 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 300;
-    color: rgb(101, 65, 38);
+    font-family: var(--font-heading);
+    color: var(--brand-blue-logo);
     margin-bottom: 1rem;
     letter-spacing: -2px;
 }
@@ -18,7 +19,8 @@
 .heroTitle p {
     font-size: 1.25rem;
     line-height: 1.8;
-    color: #5d4a3a;
+    font-family: var(--font-body);
+    color: var(--brand-blue-deep);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -62,14 +64,15 @@
     width: 4px;
     height: 100%;
 
-    background: saddlebrown;
+    background: rgb(63, 108, 154);
     border-radius: 10px;
 }
 
 .section1 p {
     font-size: 1.25rem;
     line-height: 2;
-    color: #3d3126;
+    font-family: var(--font-body);
+    color: var(--brand-blue-deep);
 }
 
 
@@ -85,7 +88,8 @@
         #faf5ee,
         #f4efe7
     ); */
-    background-color: #64503e84;
+    background-color: var(--sand);
+    
 
     /* border-radius: 24px; */
 
@@ -93,10 +97,10 @@
 }
 
 .section2 p {
-    font-family: Cormorant Garamond, serif;
+    font-family: var(--font-body);
+    color: var(--brand-blue-deep);
     font-size: 1.6rem;
     line-height: 2;
-    color: #ffffff;
     margin: 10px 200px 10px 200px;
 }
 
@@ -119,13 +123,13 @@
     box-shadow:
         0 20px 40px rgba(0, 0, 0, .08);
 
-    border-top: 6px solid saddlebrown;
+    border-top: 6px solid var(--brand-blue-deep);
 }
 
 .section3 h2 {
     font-size: 2rem;
     font-weight: 400;
-    color: saddlebrown;
+    color: var(--brand-blue-logo);
 
     margin-bottom: 2rem;
 
@@ -138,9 +142,10 @@
 
     padding: 1rem 0;
 
-    color: #3d3126;
+    font-family: var(--font-mono);
+    color: var(--brand-blue-deep);
 
-    border-bottom: 1px solid rgba(139, 69, 19, .15);
+    border-bottom: 1px solid var(--border);
 }
 
 .section3 h3 {
@@ -149,18 +154,18 @@
     font-size: 1rem;
     font-weight: 400;
 
-    color: #6a5849;
+    color: var(--brand-blue-deep);
 
     text-align: center;
 }
 
 .section3 a{
     text-decoration: none;
-    color: #6a5849;
+    color: var(--brand-blue-deep);
 }
 .section3 a:hover{
     text-decoration: underline;
-    color: #41352c;
+    color: var(--brand-blue-deep);
 }
 
 

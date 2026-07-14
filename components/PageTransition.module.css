@@ -4,7 +4,7 @@
   align-items: center;
   position: fixed;
   inset: 0;
-  background-color: #f5efe5;
+  background-color: var(--paper);
   z-index: 2000;
 
   opacity: 1;
