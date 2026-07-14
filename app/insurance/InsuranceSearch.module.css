@@ -8,72 +8,88 @@
 .searchInput {
     width: 70%;
     padding: 1rem 1.25rem;
-    border: 1px solid #e4d6c3;
-    border-radius: 12px;
+
+    font-family: var(--font-body);
     font-size: 2rem;
-    background: white;
+    color: var(--body-gray);
+
+    background: var(--paper);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
     outline: none;
-    border-color: #7b6752;
-    box-shadow: 0 0 0 3px rgba(78, 66, 66, 0.15);
-    color: #4b3f32;
+    transition: border-color .2s ease, box-shadow .2s ease;
 }
 
 .searchInput:focus {
-    border-color: #342a20;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 4px rgba(123, 97, 255, 0.15);
 }
 
 .dropdown {
-    width: 70%;
     position: absolute;
     top: calc(100% + 8px);
-    left: calc(15%);
-    right: 0;
-    background: white;
-    border: 1px solid #e4d6c3;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(72, 62, 37, 0.1);
+    left: 15%;
+
+    width: 70%;
     max-height: 300px;
     overflow-y: auto;
     z-index: 100;
-    color: #4b3f32;
+
+    background: var(--paper);
+    color: var(--body-gray);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-card);
 }
 
 .dropdownItem {
     padding: 1rem;
     cursor: pointer;
-    transition: background 0.15s ease;
+
+    font-family: var(--font-body);
+
+    transition: background .2s ease;
 }
 
 .dropdownItem:hover {
-    background: #f5efe6;
+    background: var(--sand);
 }
 
 .selectedInsurance {
-    background: #d8e8d6 !important;
-    border: 2px solid #4f8a4d !important;
-    box-shadow: 0 0 0 3px rgba(79, 138, 77, 0.15);
+    background: var(--accent-sage) !important;
+    color: white;
+
+    border: 2px solid var(--accent-sage-dark) !important;
+
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
 }
 
 .subtitle {
-    color: #7a6a58;
+    font-family: var(--font-body);
+    color: var(--body-gray);
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .card {
-    color: #4b3f32;
-    /* font-size: 1.8rem; */
-    margin-bottom: 0.5rem;
-    background: #fffdf9;
-    border-radius: 18px;
+    margin: 0;
+    background: var(--paper);
+    color: var(--body-gray);
+
+    font-family: var(--font-body);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
     padding: 2.5rem;
     margin-bottom: 2rem;
-    box-shadow:
-        0 8px 25px rgba(100, 80, 50, 0.08),
-        0 2px 8px rgba(100, 80, 50, 0.04);
-    border: 1px solid #ece2d5;
+
+    box-shadow: var(--shadow-card);
 }
 
 .insuranceGrid {
@@ -83,25 +99,28 @@
 }
 
 .insuranceItem {
-    background: #f5efe6;
+    background: var(--cream);
+
     padding: 1rem 1.25rem;
-    border-radius: 12px;
-    border: 1px solid #e4d6c3;
-    color: #4b3f32;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    color: var(--body-gray);
+    font-family: var(--font-body);
     font-weight: 500;
+
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
 }
 
 .insuranceItem:hover {
-    transform: translateY(-2px);
-    background: #efe6d8;
-    box-shadow: 0 6px 18px rgba(100, 80, 50, 0.12);
+    background: var(--sand);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card);
 }
-
-
 
 @media (max-width: 768px) {
     .card {
