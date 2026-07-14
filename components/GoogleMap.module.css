@@ -3,9 +3,10 @@
   display: flex;
   align-items: center;
   gap: 150px;
-  background: #ede4d8;
+  background: var(--cream);
   font-family: 'Cormorant Garamond', serif;
   text-decoration: none;
+  border-top: 1px solid var(--border);
 }
 
 .mapSection iframe {
@@ -16,16 +17,17 @@
 
 .mapSection .textContainer a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 30px;
-  color: #5b4f44;
+  color: var(--brand-blue-deep);
+  font-family: var(--font-mono);
   transition: 1s;
 }
 
 .mapSection .textContainer h3,
 .mapSection .textContainer p  {
   font-size: 1.5rem;
-  color: #5b4f44;
+  color: var(--brand-blue-deep);
 }
 
 .mapSection .textContainer a:hover {

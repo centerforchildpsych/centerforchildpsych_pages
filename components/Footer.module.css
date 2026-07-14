@@ -1,5 +1,6 @@
 .easeyStyle {
   background: var(--teal-green);
+  font-family:var(--font-mono);
   color: #ffffff;
   text-align: center;
   padding: 12px;

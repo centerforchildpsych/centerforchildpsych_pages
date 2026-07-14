@@ -1,3 +1,7 @@
+.easeyStyle{
+  font-family:var(--font-mono);
+}
+
 .easeyStyle a {
   text-decoration: none;
   color: #ffffff;
@@ -8,7 +12,7 @@
 }
 
 .emailLink {
-  color: inherit;
+  color: white;
   text-decoration: underline;
   transition: opacity 0.2s ease;
 }
@@ -30,12 +34,12 @@
 .scrollngHeader {
   width: 100%;
   min-height: 100px;
-  background: rgb(245, 239, 229);
+  background: var(--sand);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px clamp(20px, 5vw, 80px);
-  border-bottom: 1px solid #3e3124;
+  border-bottom: 2px solid var(--border);
   gap: 20px;
 }
 
@@ -47,8 +51,11 @@
   align-items: center;
 }
 
+.logoContainer a{
+  color: var(--ink);
+}
+
 .scrollngHeader a {
-    color: inherit;
     text-decoration: none;
     font-size: .9rem;
 }
@@ -80,7 +87,8 @@
 /* each link on nav bar */
 .navBarLink {
   text-decoration: none;
-  color: #5c4b3a;
+  color: var(--ink);
+  font-family: var(--font-body);
   transition: 0.25s ease;
   font-size: clamp(0.9rem, 1vw, 1.1rem);
   position: relative;
@@ -88,15 +96,16 @@
 }
 
 .navBarLink:hover {
-  color: #8b6b4a;
+  color: var(--accent-purple);
   transform: scale(1.05);
 }
 
 .navButton {
-  color: inherit;
+  color: white;
   text-decoration: none;
   padding: 12px 20px;
-  background-color: rgba(109, 172, 255, 0.793);
+  background-color: var(--accent-purple);
+
   transition: 0.25s ease;
   margin-left: 15px;
   font-size: clamp(0.9rem, 1vw, 1rem);
@@ -105,7 +114,7 @@
 }
 
 .navButton:hover {
-  background-color: rgba(141, 186, 246, 0.793);
+  background-color: var(--accent-purple-dark);
 }
 
 /* HAMBURGER */
@@ -113,8 +122,8 @@
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #8b6b4a;
-  background-color: #efe8dfb8;
+  color: white;
+  background-color: var(--accent-purple);
   border-radius: 5px;
   padding: 10px;
 }
@@ -129,7 +138,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background: linear-gradient(to right, #857e72, #5c5548);
+  background: var(--accent-purple);
   color: white;
   font-size: 1.2rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);

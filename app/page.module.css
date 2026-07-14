@@ -11,7 +11,10 @@ html {
   display: flex;
   margin-left: 200px;
 }
-
+.buildingInfo h1{
+  font-family: var(--font-body);
+  color: var(--brand-blue-deep);
+}
 .buildingInfo a {
   text-decoration: none;
   color: var(--brand-blue-deep);
@@ -558,6 +561,9 @@ html {
   .hero h1{
     font-size: 2.8rem;
     line-height: 1.1;
+  }
+  .hero h1 p{
+    font-size: 4rem;
   }
 
   .hero p {
