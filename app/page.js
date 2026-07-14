@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        <BlankSpace height="50px" />
+        {/* <BlankSpace height="50px" /> */}
 
         <section className={styles.intro}>
           <h2>You deserve care that sees the whole person.</h2>
@@ -55,7 +55,7 @@ export default function Home() {
           </p>
         </section>
 
-        <BlankSpace height="200px" />
+        {/* <BlankSpace height="200px" /> */}
 
         <section className={styles.parallelTextImage}>
           <TwoItemBox>
@@ -82,7 +82,7 @@ export default function Home() {
           </TwoItemBox>
         </section>
 
-        <BlankSpace height="200px" />
+        {/* <BlankSpace height="200px" /> */}
 
         <section className={styles.quiz}>
           <div className={styles.quizBox}>
@@ -103,7 +103,7 @@ export default function Home() {
           </div>
         </section>
 
-        <BlankSpace height="200px" />
+        {/* <BlankSpace height="200px" /> */}
 
         <section className={styles.tmsParallelBlock}>
           <h2>Now offering TMS</h2>
@@ -207,7 +207,7 @@ export default function Home() {
         </section>
 
 
-        <BlankSpace height="100px" />
+        {/* <BlankSpace height="100px" /> */}
 
         <section className={styles.buildingInfo}>
           <ImageHero
@@ -227,7 +227,7 @@ export default function Home() {
           </ImageHero>
         </section>
 
-        <BlankSpace height="50px" />
+        {/* <BlankSpace height="50px" /> */}
 
       </main>
     </div>

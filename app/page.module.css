@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* =========================
    Building Info
 ========================= */
@@ -30,10 +29,10 @@ html {
    Page Layout
 ========================= */
 
-.page,
+/* .page,
 .main {
   background-color: var(--cream);
-}
+} */
 
 
 /* =========================
@@ -144,6 +143,8 @@ html {
 ========================= */
 
 .hero {
+  margin: 0;
+  background-color: var(--paper);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
