@@ -120,7 +120,8 @@ export default function Providers() {
 
                     <div className={styles.heroButtons}>
                         <a
-                            href="/appointments"
+                            href="https://consumer.scheduling.athena.io/?locationId=27185-1"
+                            target="_blank" rel="noopener noreferrer"
                             className={styles.primaryButton}
                         >
                             Schedule Appointment
@@ -211,27 +212,6 @@ export default function Providers() {
                         </div>
                     ))}
                 </section>
-
-                <section className={styles.joinSection}>
-                    <div className={styles.joinCard}>
-                        <h2>Interested in Joining Our Team?</h2>
-
-                        <p>
-                            We're always looking for compassionate clinicians and
-                            professionals who are passionate about providing
-                            exceptional psychiatric care to children, adolescents,
-                            and families.
-                        </p>
-
-                        <a
-                            href="/careers"
-                            className={styles.primaryButton}
-                        >
-                            View Careers
-                        </a>
-                    </div>
-                </section>
-
             </main>
         </>
     );
