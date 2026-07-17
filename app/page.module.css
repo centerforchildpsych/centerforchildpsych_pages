@@ -100,8 +100,9 @@ html {
   justify-content: center;
   align-items: center;
 
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   border-right: none;
+  border-radius: 18px;
 
   background: var(--cream);
 }
@@ -130,7 +131,8 @@ html {
 .imageSection {
   width: 100%;
   height: 100%;
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
+  border-radius: 18px;
 }
 
 .imageSection img {
@@ -258,52 +260,110 @@ html {
 /* =========================
    TMS
 ========================= */
-
 .tmsParallelBlock {
-  background-color: var(--cream);
+  background: var(--cream);
+  padding: 5rem 0;
 }
-.tmsParallelBlock h2 {
+
+.tmsParallelBlock > h2 {
   font-family: var(--font-heading);
   color: var(--brand-blue-logo);
-  padding: 30px;
-  border-top: 1px solid var(--border);
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 3rem;
 }
 
+.twoBoxPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
 
-.tmsParallelBlock .textItems p {
+.tmsParallelBlock .imageSection img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+.textSection {
+  display: flex;
+  align-items: center;
+}
+
+.textItems {
+  max-width: 550px;
+}
+
+.textItems h2 {
+  font-family: var(--font-heading);
+  color: var(--brand-blue-deep);
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.textItems h4 {
+  font-family: var(--font-body);
+  color: var(--accent-navy);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.textItems p {
   font-family: var(--font-body);
   color: var(--ink);
-  padding: 0 150px 50px;
-  line-height: 2;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
 }
 
-
-.tmsParallelBlock .textItems h2 {
-  font-family: var(--font-body);
-  color: var(--brand-blue-deep);
-  text-align: left;
-  margin-left: 20px;
-}
-
-
-.tmsParallelBlock .textItems h4 {
-  color: var(--accent-navy);
-  padding-left: 120px;
-}
-
-
-.tmsParallelBlock .primaryBtn {
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--accent-yellow);
-  font-family: var(--font-mono);
-  display: inline-block;
-  margin: 50px;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
+  color: var(--brand-blue-deep);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 34px;
+  border-radius: 999px;
+  transition: all .25s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
 }
 
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.2);
+}
+
+@media (max-width: 900px) {
+  .twoBoxPanel {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .textItems {
+    max-width: 100%;
+  }
+
+  .textItems h2 {
+    font-size: 1.9rem;
+  }
+
+  .textItems h4 {
+    font-size: 1.05rem;
+  }
+}
 
 
 /* =========================
@@ -516,20 +576,6 @@ html {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 900px) {
-
-  .tmsParallelBlock .textItems h2 {
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .tmsParallelBlock .textItems h4 {
-    text-align: center;
-    padding: 0;
-    /* margin-left: 130px;
-    margin-right: 130px; */
-  }
-
   .reviewGrid,
   .blogGrid {
     grid-template-columns: 1fr;
@@ -546,15 +592,6 @@ html {
 
 /* Media query for mobile phones and tablets */
 @media screen and (max-width: 1024px) {
-
-  .tmsParallelBlock .textItems h2 {
-    padding-left: 80px;
-  }
-
-  .tmsParallelBlock .textItems h4 {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
 
   /* Reset massive desktop margins */
   .buildingInfo {

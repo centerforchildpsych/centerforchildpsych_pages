@@ -16,7 +16,7 @@ export default function Home() {
             <h1>
               <p className={styles.heroPrimary}>Compassionate Care</p>
               <p className={styles.heroSecondary}>For Every Stage
-              Of Your Journey</p>
+                Of Your Journey</p>
             </h1>
             <p>
               Therapy, psychiatric care, and support
@@ -106,36 +106,47 @@ export default function Home() {
         {/* <BlankSpace height="200px" /> */}
 
         <section className={styles.tmsParallelBlock}>
-          <h2>Now offering TMS</h2>
-          <TwoItemBox>
-            {/* First Child: Text Section */}
+          <h2>Now Offering TMS</h2>
+
+          <div className={styles.twoBoxPanel}>
+            {/* Image */}
             <div className={styles.imageSection}>
               <img
                 src="/photos/TMS_Patient.png"
-                alt="TMS Patient and Docter"
+                alt="Patient receiving NeuroStar TMS treatment"
               />
             </div>
-            {/* Second Child: Image Section */}
+
+            {/* Text */}
             <div className={styles.textSection}>
               <div className={styles.textItems}>
                 <h2>Treat Depression at the Source</h2>
+
                 <h4>
-                  Do you want to treat your depression without the side effects of medications?<br />
-                  Has medication not worked for you in the past?<br />
-                  TMS may be the right choice for you.<br />
+                  Do you want to treat your depression without the side effects of
+                  medication?
+                  <br />
+                  Has medication not worked for you in the past?
+                  <br />
+                  TMS may be the right choice for you.
                 </h4>
+
                 <p>
-                  NeuroStar TMS(Transcranial Magnetic Stimulation) goes right to the source
-                  of depression - your brain. It is a non-invasive, non-drug treatment that
-                  uses focused magnetic pulses to "wake up" those areas, and help your brain work
-                  the way it should. It's like physical therapy for your brain.<br/>
-                  <Link className={styles.primaryBtn} href="/tms">
-                    TMS
-                  </Link>
+                  NeuroStar® Transcranial Magnetic Stimulation (TMS) is an FDA-cleared,
+                  non-invasive treatment for depression. Using targeted magnetic pulses,
+                  TMS stimulates underactive areas of the brain associated with mood,
+                  helping restore healthy brain activity without medication or surgery.
+                  Many patients experience significant improvement with little to no
+                  downtime, making it an effective option when antidepressants haven't
+                  provided the relief they need.
                 </p>
+
+                <Link className={styles.primaryBtn} href="/tms">
+                  Learn More About TMS →
+                </Link>
               </div>
             </div>
-          </TwoItemBox>
+          </div>
         </section>
 
         {/* <BlankSpace height="200px" /> */}
