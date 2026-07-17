@@ -67,7 +67,7 @@ html {
   font-family: var(--font-heading);
   font-size: 3rem;
   margin-bottom: 30px;
-  color: var(--brand-blue-deep);
+  color: var(--brand-blue-logo);
 }
 
 .quizBox p {
@@ -155,7 +155,7 @@ html {
   min-height: 85vh;
 
   font-family: var(--font-body);
-  color: var(--body-gray);
+  color: var(--ink);
   line-height: 1.7;
 
   padding: 100px 8%;
@@ -163,7 +163,7 @@ html {
 
 .hero h1 p {
   font-family: var(--font-heading);
-  color: var(--brand-blue-deep);
+  color: var(--brand-blue-logo);
   font-size: 5rem;
   line-height: .9;
   margin-bottom: 30px;
@@ -172,7 +172,7 @@ html {
 }
 
 .hero h1 .heroPrimary {
-  color: var(--accent-navy);
+  color: var(--brand-blue-logo);
 }
 
 .hero h1 .heroSecondary {
@@ -263,7 +263,8 @@ html {
   background-color: var(--cream);
 }
 .tmsParallelBlock h2 {
-  color: var(--accent-yellow);
+  font-family: var(--font-heading);
+  color: var(--brand-blue-logo);
   padding: 30px;
   border-top: 1px solid var(--border);
   text-align: center;
@@ -272,14 +273,16 @@ html {
 
 
 .tmsParallelBlock .textItems p {
-  color: var(--body-gray);
+  font-family: var(--font-body);
+  color: var(--ink);
   padding: 0 150px 50px;
-  line-height: 2.5;
+  line-height: 2;
 }
 
 
 .tmsParallelBlock .textItems h2 {
-  color: var(--accent-yellow);
+  font-family: var(--font-body);
+  color: var(--brand-blue-deep);
   text-align: left;
   margin-left: 20px;
 }
@@ -293,6 +296,7 @@ html {
 
 .tmsParallelBlock .primaryBtn {
   background: var(--accent-yellow);
+  font-family: var(--font-mono);
   display: inline-block;
   margin: 50px;
   padding: 10px;
@@ -320,6 +324,8 @@ html {
 
 
 .intro p {
+  font-family: var(--font-body);
+  color: var(--ink);
   max-width: 800px;
   margin: auto;
   font-size: 1.2rem;
@@ -328,7 +334,7 @@ html {
 
 .intro h2 {
   font-family: var(--font-heading);
-  color: var(--brand-blue-deep);
+  color: var(--brand-blue-logo);
 
   font-size: 3rem;
 
@@ -493,7 +499,18 @@ html {
   display: inline-block;
 }
 
-
+.parallelTextImage h2{
+  font-family: var(--font-heading);
+  color: var(--brand-blue-logo);
+}
+.parallelTextImage li{
+  font-family: var(--font-body);
+  color: var(--brand-blue-deep);
+}
+.parallelTextImage p{
+  font-family: var(--font-body);
+  color: var(--brand-blue-logo);
+}
 
 
 

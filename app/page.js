@@ -62,7 +62,7 @@ export default function Home() {
             {/* First Child: Text Section */}
             <div className={styles.textSection}>
               <div className={styles.textItems}>
-                <h3>You wish someone could help you figure this all out…..</h3>
+                <h2>You wish someone could help you figure this all out…..</h2>
                 <ul>
                   <li>You’re struggling to communicate in your relationships</li>
                   <li>Resurfacing problems from your past</li>
