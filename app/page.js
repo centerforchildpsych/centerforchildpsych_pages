@@ -14,9 +14,9 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroText}>
             <h1>
-              <p className={styles.heroPrimary}>Compassionate Care</p>
-              <p className={styles.heroSecondary}>For Every Stage
-                Of Your Journey</p>
+              <p className={styles.heroPrimary}>Compassionate care</p>
+              <p className={styles.heroSecondary}>for every stage
+                of your journey</p>
             </h1>
             <p>
               Therapy, psychiatric care, and support

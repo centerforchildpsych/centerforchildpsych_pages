@@ -43,10 +43,11 @@
      Neutrals
   ========================= */
 
-  --cream: #F7F3EA;
-  --sand: #ebe0c964;
-  /* --sand: #EBE0C9; */
+  /* --cream: #F7F3EA; */
+  --cream: #f6ead8;
+  --sand: #EBE0C9;
   --paper: #FFFDF9;
+  --beigeCream: #f6ead8;
 
   --ink: #2B2A27;
   --body-gray: #4A4944;
@@ -84,7 +85,12 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--paper);
+  background-color: var(--cream);
+
+
+  
+
+
   /* background: var(--cream);
 
   font-family: var(--font-body);
@@ -134,3 +140,6 @@ label,
   font-family: var(--font-mono);
   color: var(--muted-gray);
 } */
+
+
+
