@@ -188,6 +188,7 @@ html {
     background-position: 100% 0%;
   }
 }
+
 .hero h1 p {
   font-family: var(--font-heading);
   color: var(--brand-blue-logo);
@@ -207,6 +208,9 @@ html {
 }
 
 .hero p {
+  margin-top: 20px;
+  font-family: var(--font-body);
+  color: var(--ink);
   font-size: 1.2rem;
   max-width: 500px;
 }
