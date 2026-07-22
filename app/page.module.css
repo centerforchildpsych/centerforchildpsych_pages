@@ -147,6 +147,7 @@ html {
 ========================= */
 .hero {
   margin: 0;
+  margin-top: 50px;
   border-bottom: solid 3px var(--border);
   position: relative;
   overflow: hidden;

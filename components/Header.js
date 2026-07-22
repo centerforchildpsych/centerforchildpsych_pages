@@ -7,21 +7,19 @@ import styles from "./Header.module.css"
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [showButton, setShowButton] = useState(false);
+    const [headerOffset, setHeaderOffset] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setShowButton(true);
-            } else {
-                setShowButton(false);
-            }
+            console.log(window.scrollY);
+            setShowButton(window.scrollY > 300);
+            setHeaderOffset(window.scrollY < 10)
         };
 
-        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // initialize on mount
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const scrollToTop = () => {
@@ -35,7 +33,7 @@ function Header() {
         <>
             <p className={styles.easeyStyle}>
                 <a href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
-                    target="_blank" rel="noopener noreferrer">1103 N. Gray Street | Killeen, TX 76541</a>  
+                    target="_blank" rel="noopener noreferrer">1103 N. Gray Street | Killeen, TX 76541</a>
                 {" "}|{" "}
                 <a href="tel:+12547741163">(254) 774-1163</a> |{" "}
                 <a
@@ -46,15 +44,15 @@ function Header() {
                 </a>
             </p>
 
-            <div className={styles.scrollngHeader}>
+            <div className={`${styles.scrollngHeader} ${headerOffset ? styles.offsetHeader : ''}`.trim()}>
 
                 <div className={styles.logoContainer}>
-                    <Link  href="/">
+                    <Link href="/">
                         <img
-                        className={styles.imageLogo}
-                        src='./photos/ChildCenterImg.png'
-                        alt='The Center for Child and Family Psychiatry, PC'
-                    />
+                            className={styles.imageLogo}
+                            src='./photos/ChildCenterImg.png'
+                            alt='The Center for Child and Family Psychiatry, PC'
+                        />
                     </Link>
                     <p>PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a></p>
                 </div>
