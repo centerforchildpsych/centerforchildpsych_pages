@@ -14,9 +14,9 @@ export default function Home() {
         <section className={styles.hero}>
           <div className={styles.heroText}>
             <h1>
-              <p className={styles.heroPrimary}>Compassionate care</p>
-              <p className={styles.heroSecondary}>for every stage
-                of your journey</p>
+              <p className={styles.heroPrimary}>Compassionate care</p><br/>
+              <p className={styles.heroSecondary}><i>for every stage
+                of your journey</i></p>
             </h1>
             <p>
               Therapy, psychiatric care, and support
@@ -142,7 +142,7 @@ export default function Home() {
                 </p>
 
                 <Link className={styles.primaryBtn} href="/tms">
-                  Learn More About TMS →
+                  Learn More About TMS
                 </Link>
               </div>
             </div>

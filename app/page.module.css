@@ -77,8 +77,20 @@ html {
 }
 
 .quizBox div .secondaryBtn {
+  font-family: var(--font-mono);
+  padding: 16px 28px;
+  border-radius: 50px;
   display: inline-block;
   margin-left: 50px;
+  font-size: 1rem;
+}
+.quizBox div .primaryBtn {
+  font-family: var(--font-mono);
+  padding: 16px 28px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 1rem;
 }
 
 
@@ -154,7 +166,7 @@ html {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  /* align-items: center; */
   gap: 80px;
 
   min-height: 85vh;
@@ -189,11 +201,14 @@ html {
     background-position: 100% 0%;
   }
 }
-
+.heroText{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
 .hero h1 p {
   font-family: var(--font-heading);
   color: var(--brand-blue-logo);
-  font-size: 5rem;
   /* line-height: 1.1; */
   margin-bottom: 30px;
   display: initial;
@@ -201,10 +216,12 @@ html {
 }
 .hero h1 .heroPrimary {
   color: var(--brand-blue-logo);
+  font-size: 4rem;
 }
 
 .hero h1 .heroSecondary {
   color: var(--accent-sage);
+  font-size: 2.5rem;
 }
 
 .hero p {
@@ -241,6 +258,7 @@ html {
   text-decoration: none;
 
   background: var(--accent-purple);
+  font-family: var(--font-mono);
   color: white;
 
   border: none;
@@ -360,7 +378,7 @@ html {
   justify-content: center;
   background: var(--accent-yellow);
   color: var(--brand-blue-deep);
-  font-family: var(--font-heading);
+  font-family: var(--font-mono);
   font-weight: 700;
   text-decoration: none;
   padding: 14px 34px;
