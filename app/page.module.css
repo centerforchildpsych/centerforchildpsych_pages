@@ -184,7 +184,7 @@ html {
     left: 450;
     bottom: 120;;
 
-    animation: rotateGlow 30s linear infinite;
+    animation: rotateGlow 20s linear infinite;
 
     z-index: -1;
 }
