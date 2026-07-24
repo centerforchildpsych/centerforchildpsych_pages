@@ -218,9 +218,8 @@ export default function Home() {
         </section>
 
 
-        {/* <BlankSpace height="100px" /> */}
 
-        <section className={styles.buildingInfo}>
+        {/* <section className={styles.buildingInfo}>
           <ImageHero
             image="/photos/buildingImage.png"
             alt="Center for Child Psych logo"
@@ -236,9 +235,8 @@ export default function Home() {
               >1103 North Gray Street Killeen, TX 76541
               </a> for all in-person visits and inquiries. We are no longer at Jasper Drive. </p>
           </ImageHero>
-        </section>
+        </section> */}
 
-        {/* <BlankSpace height="50px" /> */}
 
       </main>
     </div>

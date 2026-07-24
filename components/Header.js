@@ -96,7 +96,7 @@ function Header() {
                     <Link className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
                         target="_blank" rel="noopener noreferrer"
                         onClick={() => setMenuOpen(false)}>
-                        BOOK NOW
+                        <strong>BOOK NOW</strong>
                     </Link>
                 </div>
 
