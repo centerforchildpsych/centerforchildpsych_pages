@@ -166,41 +166,40 @@ html {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* align-items: center; */
   gap: 80px;
 
   min-height: 85vh;
   padding: 100px 8%;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
 
-  background:
-    radial-gradient(
-      circle at 85% 5%,
-      rgba(194, 148, 148, 0.834) 0%,
-      rgba(239, 216, 180, 0.593) 25%,
-      rgba(239, 216, 180, 0.384) 45%,
-      transparent 50%
-    ),
-    var(--cream);
+    background-image: url("/glow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25%;
+    left: 450;
+    bottom: 120;;
 
-  /* background-repeat: no-repeat; */
+    animation: rotateGlow 30s linear infinite;
 
-  animation: heroGlow 8s ease-in-out infinite;
+    z-index: -1;
+}
 
-  color: var(--ink);
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
-@keyframes heroGlow {
-  0%, 100% {
-    background-size: 100% 100%;
-    background-position: 100% 0%;
-  }
-
-  50% {
-    background-size: 200% 200%;
-    background-position: 100% 0%;
-  }
-}
 .heroText{
   display: flex;
   flex-direction: column;
@@ -247,6 +246,10 @@ html {
 
   border-radius: 50% 50% 0 0;
   border: 1px solid var(--border);
+}
+.heroImage hr{
+  margin-top: 10px;
+  color: var(--border);
 }
 
 
