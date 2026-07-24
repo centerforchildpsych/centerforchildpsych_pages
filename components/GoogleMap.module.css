@@ -1,8 +1,9 @@
 .mapSection {
   padding: 50px;
+  padding-top: 0;
   display: flex;
   align-items: center;
-  gap: 150px;
+  gap: 100px;
   background: var(--cream);
   font-family: 'Cormorant Garamond', serif;
   text-decoration: none;
@@ -13,33 +14,47 @@
   border-radius: 30px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
   width: 75%;
+  height: 300px;
 }
-
+.textContainer{
+  background-color: var(--sand);
+  padding: 25px;
+  border-radius: 18px;
+  border: solid 1px var(--border);
+}
 .mapSection .textContainer a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 30px;
   color: var(--brand-blue-deep);
   font-family: var(--font-mono);
   transition: 1s;
 }
 
-.mapSection .textContainer h3,
-.mapSection .textContainer p  {
+.mapSection .textContainer h3{
   font-size: 1.5rem;
   color: var(--brand-blue-deep);
 }
+.mapSection .textContainer p  {
+  color: var(--brand-blue-deep);
+}
+.mapSection .textContainer a{
+  margin: 0;
+}
+.mapSection .textContainer p, 
+.mapSection .textContainer a {
+  margin-left: 20px;
+}
+
 
 .mapSection .textContainer a:hover {
   text-decoration: underline;
-  transform: scale(1.1);
-  transition: 1s;
 }
 
 .mapSection .textContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 

@@ -14,21 +14,23 @@ export default function GoogleMap() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
             ></iframe>
             <div className={styles.textContainer}>
+                <h3><strong>Address:</strong></h3>
                 <a href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
                     target="_blank" rel="noopener noreferrer">
                     1103 North Gray Street<br />
                     Killeen, TX 76541</a>
 
-                <h3>Contact:</h3>
-                <p><a href="tel:+12547741163">(254) 774-1163</a><br />
-                    <a href="tel:+18334645455">833-464-5455</a></p>
+                <h3><strong>Phone:</strong></h3>
+                <p><a href="tel:+12547741163">(254) 774-1163</a></p>
+                <h3><strong>Fax:</strong></h3>
+                <p><a href="tel:+18334645455">833-464-5455</a></p>
 
+                <h3><strong>Email:</strong></h3>
                 <a
-                    className="footerLink"
                     href="mailto:centerforchildpsych@gmail.com"
                 >
                     centerforchildpsych@gmail.com
