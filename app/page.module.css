@@ -172,33 +172,22 @@ html {
   padding: 100px 8%;
 }
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: -20%;
-
-    background-image: url("/glow.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 25%;
-    left: 450;
-    bottom: 120;;
-
-    animation: rotateGlow 20s linear infinite;
-
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: -160px;
+  right: -140px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(139,111,148,0.25),
+    rgba(217,164,65,0.12) 60%,
+    transparent 72%
+  );
+  border-radius: 50%;
+  filter: blur(6px);
+  z-index: 10;
 }
-
-@keyframes rotateGlow {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 
 .heroText{
   display: flex;

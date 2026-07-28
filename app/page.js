@@ -34,12 +34,12 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className={styles.heroImage}>
+          {/* <div className={styles.heroImage}>
             <img
               src="/photos/MomHoldingDaughter.png"
               alt="Mom Holding Daughter" />
             <hr className={styles.hrLine} />
-          </div>
+          </div> */}
         </section>
 
         {/* <BlankSpace height="50px" /> */}
