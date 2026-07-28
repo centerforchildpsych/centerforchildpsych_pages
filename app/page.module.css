@@ -72,7 +72,7 @@ html {
 
 .quizBox p {
   font-family: var(--font-body);
-  font-size: 2rem;
+  font-size: var(--font-size-body);
   margin-bottom: 30px;
 }
 
@@ -176,8 +176,8 @@ html {
   position: absolute;
   top: -160px;
   right: -140px;
-  width: 520px;
-  height: 520px;
+  width: 620px;
+  height: 620px;
   background: radial-gradient(
     circle at 30% 30%,
     rgba(139,111,148,0.25),
@@ -204,19 +204,21 @@ html {
 }
 .hero h1 .heroPrimary {
   color: var(--brand-blue-logo);
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .hero h1 .heroSecondary {
   color: var(--accent-sage);
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
-.hero p {
-  margin-top: 20px;
+.heroBody {
+  margin-top: 40px;
+  margin-left: 20px;
   font-family: var(--font-body);
   color: var(--ink);
-  font-size: 1.2rem;
+  font-size: var(--font-size-body);
+  line-height: 2;
   max-width: 500px;
 }
 
@@ -428,7 +430,8 @@ html {
   color: var(--ink);
   max-width: 800px;
   margin: auto;
-  font-size: 1.2rem;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
 }
 
 

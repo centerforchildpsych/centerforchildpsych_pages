@@ -53,7 +53,7 @@
   --body-gray: #4A4944;
   --muted-gray: #8A8A80;
 
-  --teal-green: #24424B; 
+  --teal-green: #24424B;
 
   --border: rgba(47, 87, 112, 0.14);
 
@@ -67,6 +67,8 @@
   --radius-lg: 20px;
 
   --shadow-card: 0 8px 24px rgba(47, 87, 112, 0.08);
+
+  --font-size-body: 1.5rem;
 }
 
 
@@ -88,7 +90,7 @@ body {
   background-color: var(--cream);
 
 
-  
+
 
 
   /* background: var(--cream);
@@ -107,7 +109,7 @@ body {
   margin: 0;
 }
 
-section{
+section {
   margin: 150px 0 150px 0;
 }
 
@@ -140,6 +142,3 @@ label,
   font-family: var(--font-mono);
   color: var(--muted-gray);
 } */
-
-
-

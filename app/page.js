@@ -18,7 +18,7 @@ export default function Home() {
               <p className={styles.heroSecondary}><i>for every stage
                 of your journey</i></p>
             </h1>
-            <p>
+            <p className={styles.heroBody}>
               Therapy, psychiatric care, and support
               designed around your unique needs,
               helping you feel like yourself again.
