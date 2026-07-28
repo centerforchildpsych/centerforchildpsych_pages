@@ -8,7 +8,7 @@ export default function About() {
             {/* logo fade out on page load */}
             <PageTransition />
 
-            <BlankSpace height="100px" />
+            
             <div className={styles.heroTitle}>
                 <h1>Meet Dr. Andrey Shalomov</h1>
                 <p>Providing compassionate psychiatric care for children, adolescents, and adults throughout Central Texas.</p>

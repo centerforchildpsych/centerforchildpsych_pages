@@ -164,8 +164,8 @@ html {
   position: relative;
   overflow: hidden;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   gap: 80px;
 
   min-height: 85vh;
@@ -670,8 +670,8 @@ html {
 
   /* Convert 2-column grid into 1-column layout for Hero section */
   .hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    /* grid-template-columns: 1fr;
+    gap: 40px; */
     padding: 60px 5%;
     min-height: auto;
   }

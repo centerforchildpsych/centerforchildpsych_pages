@@ -17,7 +17,7 @@
   height: 300px;
 }
 .textContainer{
-  background-color: var(--sand);
+  background-color: var(--paper);
   padding: 25px;
   border-radius: 18px;
   border: solid 1px var(--border);
