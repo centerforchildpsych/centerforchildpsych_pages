@@ -57,10 +57,10 @@
     line-height: 2;
     font-family: var(--font-body);
     color: var(--brand-blue-deep);
-    background-color: var(--cream);
+    background-color: var(--paper);
 }
 .section1 div {
-    background-color: var(--cream);
+    background-color: var(--paper);
     padding: 25px;
     border-radius: 15px;
     border-left: solid var(--brand-blue-logo) 4px;
