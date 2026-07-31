@@ -58,8 +58,7 @@ function Header() {
                 </div>
 
 
-                <div
-                    className={styles.hamburger}
+                <div className={`${styles.hamburger} ${headerOffset ? styles.offsetHamburger : ''}`.trim()}
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     ☰

@@ -84,6 +84,7 @@ html {
   margin-left: 50px;
   font-size: 1rem;
 }
+
 .quizBox div .primaryBtn {
   font-family: var(--font-mono);
   padding: 16px 28px;
@@ -171,6 +172,7 @@ html {
   min-height: 85vh;
   padding: 100px 8%;
 }
+
 .hero::before {
   content: "";
   position: absolute;
@@ -178,22 +180,21 @@ html {
   right: -140px;
   width: 620px;
   height: 620px;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(139,111,148,0.25),
-    rgba(217,164,65,0.12) 60%,
-    transparent 72%
-  );
+  background: radial-gradient(circle at 30% 30%,
+      rgba(139, 111, 148, 0.25),
+      rgba(217, 164, 65, 0.12) 60%,
+      transparent 72%);
   border-radius: 50%;
   filter: blur(6px);
   z-index: 10;
 }
 
-.heroText{
+.heroText {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
 }
+
 .hero h1 p {
   font-family: var(--font-heading);
   color: var(--brand-blue-logo);
@@ -202,6 +203,7 @@ html {
   display: initial;
   padding: 5px;
 }
+
 .hero h1 .heroPrimary {
   color: var(--brand-blue-logo);
   font-size: 5rem;
@@ -238,7 +240,8 @@ html {
   border-radius: 50% 50% 0 0;
   border: 1px solid var(--border);
 }
-.heroImage hr{
+
+.heroImage hr {
   margin-top: 10px;
   color: var(--border);
 }
@@ -387,6 +390,14 @@ html {
 }
 
 @media (max-width: 900px) {
+  .textSection{
+    margin-bottom: 25px;
+  }
+
+  .quizBox div .primaryBtn {
+    margin-bottom: 10px;
+  }
+
   .twoBoxPanel {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -403,6 +414,25 @@ html {
 
   .textItems h4 {
     font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero::before {
+
+    width: 420px;
+    height: 420px;
+
+  }
+
+  .hero h1 .heroPrimary {
+    color: var(--brand-blue-logo);
+    font-size: 3.3rem;
+  }
+
+  .hero h1 .heroSecondary {
+    color: var(--accent-sage);
+    font-size: 2rem;
   }
 }
 
