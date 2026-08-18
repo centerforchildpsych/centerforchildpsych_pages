@@ -32,6 +32,9 @@ export default function Home() {
               <Link className={styles.secondaryBtn} href="/patientResources">
                 Explore Services
               </Link>
+              <Link className={styles.secondaryBtn} href="/autismQuiz">
+                test quiz
+              </Link>
             </div>
           </div>
           {/* <div className={styles.heroImage}>
