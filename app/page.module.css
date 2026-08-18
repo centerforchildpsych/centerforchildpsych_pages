@@ -737,3 +737,149 @@ html {
     /* Optional: adds a nice modern touch to mobile images */
   }
 }
+
+
+
+:root {
+  --purple: #8B6F94;
+  --navy: #33455C;
+  --cream: #F7F3EA;
+  --line: rgba(47, 87, 112, 0.14);
+}
+.quizSection {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--purple), #6d5875);
+  padding: 64px 6vw;
+  text-align: center;
+  color: #fff;
+}
+
+.quizBlob {
+  position: absolute;
+  top: -120px;
+  left: -100px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(217, 164, 65, 0.35),
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.sectionInner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.quizSection h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+  margin: 10px 0 12px;
+}
+
+.quizSection p {
+  font-size: 15.5px;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 auto 26px;
+  max-width: 560px;
+}
+
+.quizGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.quizCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
+  border-radius: 14px;
+  padding: 20px 22px;
+  text-decoration: none;
+  color: #fff;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.quizCard:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: translateY(-3px);
+}
+
+.quizCardLabel {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.quizCardArrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.quizNote {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 22px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.divider .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--line) 40%,
+    var(--line) 60%,
+    transparent
+  );
+}
+
+.divider .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow:
+    0 0 0 5px var(--cream),
+    0 0 0 6px var(--line);
+}
