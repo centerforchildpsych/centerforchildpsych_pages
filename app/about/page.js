@@ -38,7 +38,7 @@ export default function About() {
 
             <BlankSpace height="100px" />
 
-            <section className={styles.section3}>
+            {/* <section className={styles.section3}>
                 <div>
                     <h2>Clinic Information</h2>
                     <h4>CLINIC ADDRESS: <a href="https://www.google.com/maps/place/400+W+Jasper+Dr,+Killeen,+TX+76542/"
@@ -57,7 +57,7 @@ export default function About() {
                         target="_blank" rel="noopener noreferrer">1103 N. Gray Street | Killeen, TX | 76541</a>
                     </h3>
                 </div>
-            </section>
+            </section> */}
 
             <BlankSpace height="50px" />
         </>
