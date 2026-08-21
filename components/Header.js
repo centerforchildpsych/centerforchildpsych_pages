@@ -41,7 +41,9 @@ function Header() {
                     className={styles.emailLink}
                 >
                     centerforchildpsych@gmail.com
-                </a>
+                    
+                </a>{" "}|{" "}
+                PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a>
             </p>
 
             <div className={`${styles.scrollngHeader} ${headerOffset ? styles.offsetHeader : ''}`.trim()}>
@@ -54,7 +56,7 @@ function Header() {
                             alt='The Center for Child and Family Psychiatry, PC'
                         />
                     </Link>
-                    <p>PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a></p>
+                    
                 </div>
 
 
