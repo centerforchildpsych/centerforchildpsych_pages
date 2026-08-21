@@ -32,9 +32,7 @@ export default function Home() {
               <Link className={styles.secondaryBtn} href="/patientResources">
                 Explore Services
               </Link>
-              <Link className={styles.secondaryBtn} href="/autismQuiz">
-                test quiz
-              </Link>
+              
             </div>
           </div>
           {/* <div className={styles.heroImage}>
@@ -44,6 +42,90 @@ export default function Home() {
             <hr className={styles.hrLine} />
           </div> */}
         </section>
+
+
+
+<div className={styles.divider}>
+        <span className={styles.line}></span>
+        <span
+          className={styles.dot}
+          style={{ background: "var(--navy)" }}
+        ></span>
+        <span className={styles.line}></span>
+      </div>
+              <section className={styles.quizSection}>
+        <div className={styles.quizBlob}></div>
+
+        <div
+          className={styles.sectionInner}
+          style={{ textAlign: "center", position: "relative", zIndex: 1 }}
+        >
+          <span
+            className={styles.eyebrow}
+            style={{ color: "#FBE7A1" }}
+          >
+            Not sure where to start?
+          </span>
+
+          <h2>Concerned you may have one of these conditions?</h2>
+
+          <p>
+            Take a quick, judgment-free quiz to find out — pick whatever feels
+            closest to what you or your child has been experiencing, and we'll help
+            point you toward what might be going on.
+          </p>
+
+          <div className={styles.quizGrid}>
+            <a className={styles.quizCard} href="/anxietyQuiz">
+              <span className={styles.quizCardLabel}>Anxiety</span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+
+            <a className={styles.quizCard} href="/depressionQuiz">
+              <span className={styles.quizCardLabel}>Depression</span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+
+            <a className={styles.quizCard} href="/adhdQuiz">
+              <span className={styles.quizCardLabel}>ADHD</span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+
+            <a className={styles.quizCard} href="/bipolarQuiz">
+              <span className={styles.quizCardLabel}>Bipolar Disorder</span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+
+            <a className={styles.quizCard} href="/autismQuiz">
+              <span className={styles.quizCardLabel}>Autism</span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+
+            <a className={styles.quizCard} href="/borderlineQuiz">
+              <span className={styles.quizCardLabel}>
+                Borderline Personality Disorder
+              </span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+
+            <a className={styles.quizCard} href="/ocdQuiz">
+              <span className={styles.quizCardLabel}>OCD</span>
+              <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
+            </a>
+          </div>
+
+          <div className={styles.quizNote}>
+            Each quiz takes about two minutes. The autism quiz is designed for
+            children; the others can be taken for yourself or for a child in your
+            life.
+          </div>
+        </div>
+      </section>
+
+      
+
+
+
 
         {/* <BlankSpace height="50px" /> */}
 
@@ -58,83 +140,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className={styles.quizSection}>
-  <div className={styles.quizBlob}></div>
-
-  <div
-    className={styles.sectionInner}
-    style={{ textAlign: "center", position: "relative", zIndex: 1 }}
-  >
-    <span
-      className={styles.eyebrow}
-      style={{ color: "#FBE7A1" }}
-    >
-      Not sure where to start?
-    </span>
-
-    <h2>Concerned you may have one of these conditions?</h2>
-
-    <p>
-      Take a quick, judgment-free quiz to find out — pick whatever feels
-      closest to what you or your child has been experiencing, and we'll help
-      point you toward what might be going on.
-    </p>
-
-    <div className={styles.quizGrid}>
-      <a className={styles.quizCard} href="quiz-anxiety.html">
-        <span className={styles.quizCardLabel}>Anxiety</span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-
-      <a className={styles.quizCard} href="quiz-depression.html">
-        <span className={styles.quizCardLabel}>Depression</span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-
-      <a className={styles.quizCard} href="quiz-adhd.html">
-        <span className={styles.quizCardLabel}>ADHD</span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-
-      <a className={styles.quizCard} href="quiz-bipolar.html">
-        <span className={styles.quizCardLabel}>Bipolar Disorder</span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-
-      <a className={styles.quizCard} href="quiz-autism.html">
-        <span className={styles.quizCardLabel}>Autism</span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-
-      <a className={styles.quizCard} href="quiz-borderline.html">
-        <span className={styles.quizCardLabel}>
-          Borderline Personality Disorder
-        </span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-
-      <a className={styles.quizCard} href="quiz-ocd.html">
-        <span className={styles.quizCardLabel}>OCD</span>
-        <span className={styles.quizCardArrow}>Take the quiz &rarr;</span>
-      </a>
-    </div>
-
-    <div className={styles.quizNote}>
-      Each quiz takes about two minutes. The autism quiz is designed for
-      children; the others can be taken for yourself or for a child in your
-      life.
-    </div>
-  </div>
-</section>
-
-<div className={styles.divider}>
-  <span className={styles.line}></span>
-  <span
-    className={styles.dot}
-    style={{ background: "var(--navy)" }}
-  ></span>
-  <span className={styles.line}></span>
-</div>
+  
         {/* <BlankSpace height="200px" /> */}
 
         <section className={styles.parallelTextImage}>

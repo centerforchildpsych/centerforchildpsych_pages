@@ -161,7 +161,7 @@ html {
 .hero {
   margin: 0;
   margin-top: 50px;
-  border-bottom: solid 3px var(--border);
+  /* border-bottom: solid 3px var(--border); */
   position: relative;
   overflow: hidden;
 
@@ -442,7 +442,8 @@ html {
 ========================= */
 
 .intro {
-  margin-top: 0;
+  margin-top: 150px;
+  margin-bottom: 150px;
 
   background: var(--sand);
 
@@ -601,6 +602,9 @@ html {
 
   padding: 100px 8%;
 
+  margin-top: 150px;
+  margin-bottom: 150px;
+
 }
 
 
@@ -634,6 +638,9 @@ html {
 
 .parallelTextImage {
   margin: 20px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  
 }
 
 .parallelTextImage h2 {

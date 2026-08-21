@@ -215,7 +215,7 @@ export default function AutismQuizPage() {
         </div>
 
         <div className={styles.backLinkWrap}>
-          <a className={styles.quizBackLink} href="/home">
+          <a className={styles.quizBackLink} href="/">
             &larr; Back to all quizzes
           </a>
         </div>
