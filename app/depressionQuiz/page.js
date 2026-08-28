@@ -134,7 +134,6 @@ export default function AnxietyQuizPage() {
       <div className={styles.quizPageApp}>
         <div className={styles.quizApp}>
           <div className={styles.quizStaticHeader}>
-            <p>In the past two weeks, has the person of interest:</p>
           </div>
 
           {step < steps.length ? (
@@ -188,7 +187,16 @@ function QuizQuestion({
       <div className={styles.quizStepLabel}>
         Question {step + 1} of {total}
       </div>
-
+      {step === 0 ? (
+          ""
+        ) : (
+          <>
+            <p className={styles.quizQuestion}>
+              In the past two weeks, how often has the person of interest:
+            </p>
+            <div className={styles.quizQuestionSep}></div>
+          </>
+        )}
       <div className={styles.quizQuestion}>
         {question}
       </div>

@@ -31,7 +31,16 @@ img {
   max-width: 100%;
   display: block;
 } */
-
+.quizQuestionSep{
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--teal-deep);
+  line-height: 1.5;
+}
 .eyebrow {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12px;

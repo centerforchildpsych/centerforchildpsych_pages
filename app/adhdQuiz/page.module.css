@@ -62,6 +62,17 @@ img {
     background 0.25s ease;
 }
 
+.quizQuestionSep{
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--teal-deep);
+  line-height: 1.5;
+}
+
 .btnSolid {
   color: #fff;
   box-shadow: 0 10px 22px -10px rgba(47, 87, 112, 0.4);

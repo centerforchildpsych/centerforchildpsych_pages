@@ -14,7 +14,16 @@
   --line: rgba(47, 87, 112, 0.14);
   --shadow: 0 16px 34px -24px rgba(47, 87, 112, 0.32);
 }
-
+.quizQuestionSep{
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--teal-deep);
+  line-height: 1.5;
+}
 /* * {
   box-sizing: border-box;
 }
