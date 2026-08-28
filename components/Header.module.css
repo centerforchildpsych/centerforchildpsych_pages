@@ -238,16 +238,7 @@
   }
 }
 
-
-@media (max-width: 900px) {
-  .offsetHeader {
-    top: 40;
-  }
-  .offsetHamburger{
-    top: 70;
-  }
-}
-@media (max-width: 730px) {
+@media (max-width: 1071px) {
   .offsetHeader {
     top: 60;
   }
@@ -255,11 +246,19 @@
     top: 90;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 730px) {
   .offsetHeader {
     top: 75;
   }
   .offsetHamburger{
     top: 105;
+  }
+}
+@media (max-width: 390px) {
+  .offsetHeader {
+    top: 85;
+  }
+  .offsetHamburger{
+    top: 115;
   }
 }
