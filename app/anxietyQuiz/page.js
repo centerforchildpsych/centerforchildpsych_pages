@@ -202,6 +202,14 @@ const icons = {
     </Icon>
   ),
 
+  lifebuoy: (
+    <Icon size="16">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="3.5" />
+      <path d="m7.5 7.5 2.2 2.2M16.5 7.5l-2.2 2.2M16.5 16.5l-2.2-2.2M7.5 16.5l2.2-2.2" />
+    </Icon>
+  ),
+
   check: (
     <Icon>
       <path d="m5 12 5 5L20 7" />
@@ -251,8 +259,13 @@ export default function AnxietyQuizPage() {
   setStep((current) => current + 1);
 };
 
-  const score = Object.values(answers).reduce(
-    (sum, value) => sum + value,
+  const safetyFlag = Number(answers[0]) > 0;
+
+  const score = Object.entries(answers).reduce(
+    (sum, [index, value]) => {
+      if (Number(index) === 0) return sum;
+      return sum + Number(value || 0);
+    },
     0
   );
 
@@ -284,6 +297,7 @@ export default function AnxietyQuizPage() {
               step={step}
               total={steps.length}
               question={steps[step].text}
+              quizStep={steps[step]}
               onAnswer={selectAnswer}
               onBack={() =>
                 setStep((current) => Math.max(0, current - 1))
@@ -293,6 +307,7 @@ export default function AnxietyQuizPage() {
           ) : (
             <QuizResults
               tier={tier}
+              safetyFlag={safetyFlag}
               onRestart={restart}
             />
           )}
@@ -312,6 +327,7 @@ function QuizQuestion({
   step,
   total,
   question,
+  quizStep,
   onAnswer,
   onBack,
   onRestart,
@@ -345,7 +361,7 @@ function QuizQuestion({
       </div>
 
       <div className={styles.quizOptions}>
-        {CONFIG.mainScale.map((option) => (
+        {(quizStep?.type === "safety" ? quizStep.scale : CONFIG.mainScale).map((option) => (
           <button
             key={option.value}
             type="button"
@@ -382,7 +398,7 @@ function QuizQuestion({
   );
 }
 
-function QuizResults({ tier, onRestart }) {
+function QuizResults({ tier, safetyFlag, onRestart }) {
   const tierTags = {
     likely: "Some Patterns Noticed",
     possible: "Mixed Signals",
@@ -410,6 +426,15 @@ function QuizResults({ tier, onRestart }) {
           {tierInfo.subtext}
         </p>
       </div>
+
+      {safetyFlag ? (
+        <div className={styles.quizCrisis}>
+          <div>
+            <h4>{icons.lifebuoy}Please reach out for support</h4>
+            <p>{CONFIG.safetyResponse}</p>
+          </div>
+        </div>
+      ) : null}
 
       <ResultSection
         icon={icons.brain}
