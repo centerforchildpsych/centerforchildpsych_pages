@@ -88,6 +88,17 @@ export default function AnxietyQuizPage() {
       text,
       scale: CONFIG.mainScale,
       index,
+      excluded: CONFIG.excludeFromScore.includes(index),
+    });
+  });
+
+  CONFIG.trailing.forEach((tq, index) => {
+    allSteps.push({
+      type: "trailing",
+      text: tq.text,
+      choices: tq.choices,
+      modifierTrigger: tq.modifierTrigger,
+      trailingIndex: index,
     });
   });
 
@@ -108,10 +119,20 @@ export default function AnxietyQuizPage() {
   setStep((current) => current + 1);
 };
 
-  const score = Object.values(answers).reduce(
-    (sum, value) => sum + value,
-    0
-  );
+  let safetyFlag = false;
+  let score = 0;
+
+  steps.forEach((currentStep, index) => {
+    const answer = answers[index];
+
+    if (currentStep.type === "safety") {
+      if (Number(answer) > 0) {
+        safetyFlag = true;
+      }
+    } else if (currentStep.type === "question" && !currentStep.excluded) {
+      score += Number(answer) || 0;
+    }
+  });
 
   let tier = "not_likely";
 
@@ -120,6 +141,16 @@ export default function AnxietyQuizPage() {
   } else if (score >= CONFIG.thresholds.inconclusiveMin) {
     tier = "possible";
   }
+
+  // Match the HTML quiz: a "No" answer to the child-duration
+  // trailing question downgrades a likely result to Mixed Signals.
+  steps.forEach((currentStep, index) => {
+    if (currentStep.type === "trailing" && tier === "likely") {
+      if (answers[index] === currentStep.modifierTrigger) {
+        tier = "possible";
+      }
+    }
+  });
 
   return (
     <main>
@@ -140,6 +171,7 @@ export default function AnxietyQuizPage() {
             <QuizQuestion
               step={step}
               total={steps.length}
+              quizStep={steps[step]}
               question={steps[step].text}
               onAnswer={selectAnswer}
               onBack={() =>
@@ -150,6 +182,7 @@ export default function AnxietyQuizPage() {
           ) : (
             <QuizResults
               tier={tier}
+          safetyFlag={safetyFlag}
               onRestart={restart}
             />
           )}
@@ -169,6 +202,7 @@ function QuizQuestion({
   step,
   total,
   question,
+  quizStep,
   onAnswer,
   onBack,
   onRestart,
@@ -187,24 +221,29 @@ function QuizQuestion({
       <div className={styles.quizStepLabel}>
         Question {step + 1} of {total}
       </div>
-      {step === 0 ? (
-          ""
-        ) : (
-          <>
-            <p className={styles.quizQuestion}>
-              Has the person of interest ever had uncharacteristic episodes of:
-            </p>
-            <div className={styles.quizQuestionSep}></div>
-          </>
-        )}
+      {quizStep.type === "question" && CONFIG.backgroundText ? (
+        <div className={styles.quizBackgroundHeader}>
+          {CONFIG.backgroundText}
+        </div>
+      ) : null}
+
       <div className={styles.quizQuestion}>
         {question}
       </div>
 
       <div className={styles.quizOptions}>
-        {CONFIG.mainScale.map((option) => (
+        {(quizStep.type === "trailing"
+          ? quizStep.choices.map((choice) => ({
+              label: choice,
+              value: choice,
+            }))
+          : quizStep.scale.map((option) => ({
+              label: option.label,
+              value: option.value,
+            }))
+        ).map((option) => (
           <button
-            key={option.value}
+            key={String(option.value)}
             type="button"
             className={styles.quizOption}
             onClick={() => onAnswer(option.value)}
@@ -239,7 +278,7 @@ function QuizQuestion({
   );
 }
 
-function QuizResults({ tier, onRestart }) {
+function QuizResults({ tier, safetyFlag, onRestart }) {
   const tierTags = {
     likely: "Some Patterns Noticed",
     possible: "Mixed Signals",
@@ -250,6 +289,15 @@ function QuizResults({ tier, onRestart }) {
 
   return (
     <>
+      {safetyFlag ? (
+        <div className={styles.quizCrisis}>
+          <h4>{icons.lifebuoy} Please reach out for support</h4>
+          {CONFIG.safetyResponse.split("\n\n").map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+      ) : null}
+
       <div className={styles.resultHero}>
         <div className={styles.resultIconBadge}>
           {icons.sparkle}
