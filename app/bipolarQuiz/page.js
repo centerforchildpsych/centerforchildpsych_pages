@@ -66,7 +66,7 @@ const icons = {
   ),
 };
 
-export default function AnxietyQuizPage() {
+export default function BipolarQuizPage() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState({});
 
