@@ -94,11 +94,16 @@ function Header() {
                         onClick={() => setMenuOpen(false)}>
                         Patient Portal
                     </Link>
+                    <Link className={styles.navBarLink} href="/careers"
+                        onClick={() => setMenuOpen(false)}>
+                        Careers
+                    </Link>
                     <Link className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
                         target="_blank" rel="noopener noreferrer"
                         onClick={() => setMenuOpen(false)}>
                         <strong>BOOK NOW</strong>
                     </Link>
+                    
                 </div>
 
                 {showButton && (
