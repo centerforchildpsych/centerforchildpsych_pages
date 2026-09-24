@@ -6,52 +6,11 @@ import styles from "./page.module.css";
 const cx = (...classes) => classes.filter(Boolean).map((name) => styles[name]).join(" ");
 
 export default function CareersPage() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => setMenuOpen((open) => !open);
 
   return (
     <div className={cx("page")}>
-<div className={cx("topbar")}>
-<span>1103 N. Gray Street, Killeen, TX 76541</span>
-<span className={cx("sep")}>·</span>
-<a href="tel:2547741163">(254) 774-1163</a>
-<span className={cx("sep")}>·</span>
-<a href="mailto:centerforchildpsych@gmail.com">centerforchildpsych@gmail.com</a>
-<span className={cx("sep")}>·</span>
-<span>FAX: (833) 464-5455</span>
-</div>
-<nav>
-<a className={cx("logo")} href="/">
-<img alt="Center for Child and Family Psychiatry logo" src="/careers/careers-1.png"/>
-    Center for Child &amp; Family Psychiatry
-  </a>
-<div className={cx("nav-right")}>
-<ul className={cx("nav-links")}>
-<li><a href="/">Home</a></li>
-<li><a href="https://centerforchildpsych.com/?page_id=229">About</a></li>
-<li><a href="/meet-the-team">Meet Our Team</a></li>
-<li><a href="https://centerforchildpsych.com/?page_id=172">Insurance &amp; Billing</a></li>
-<li><a href="#">Patient Resources</a></li>
-<li><a href="https://centerforchildpsych.com/?page_id=327">TMS</a></li>
-<li><a href="https://27185.portal.athenahealth.com/">Patient Portal</a></li>
-</ul>
-<a className={cx("btn","btn-solid","btn-blue")} href="https://consumer.scheduling.athena.io?locationId=27185-1">Book Now</a>
-<button aria-label="Open menu" className={cx("nav-toggle", menuOpen && "open")} id="navToggle" onClick={toggleMobileMenu} type="button">
-<span></span><span></span><span></span>
-</button>
-</div>
-</nav>
-<div className={cx("mobile-menu", menuOpen && "open")} id="mobileMenu">
-<a href="/">Home</a>
-<a href="https://centerforchildpsych.com/?page_id=229">About</a>
-<a href="/meet-the-team">Meet Our Team</a>
-<a href="https://centerforchildpsych.com/?page_id=172">Insurance &amp; Billing</a>
-<a href="#">Patient Resources</a>
-<a href="https://centerforchildpsych.com/?page_id=327">TMS</a>
-<a href="https://27185.portal.athenahealth.com/">Patient Portal</a>
-<a className={cx("btn","btn-solid","btn-blue")} href="https://consumer.scheduling.athena.io?locationId=27185-1">Book Now</a>
-</div>
+
 <div className={cx("careers-hero")}>
 <span className={cx("eyebrow")}>Join Our Team</span>
 <h1>Build a Career With Us at The Center for Child and Family Psychiatry</h1>
@@ -204,16 +163,7 @@ export default function CareersPage() {
 <a className={cx("btn","btn-outline","btn-navy")} href="tel:2547741163">Call (254) 774-1163</a>
 </div>
 </div>
-<footer>
-<div className={cx("footer-top")}>
-<a className={cx("logo")} href="/">
-<img alt="Center for Child and Family Psychiatry logo" src="/careers/careers-9.png"/>
-      Center for Child &amp; Family Psychiatry
-    </a>
-<div>Killeen, Texas  ·  <a href="#location">Directions</a>  ·  <a href="tel:2547741163">(254) 774-1163</a></div>
-</div>
-<div className={cx("footer-copyright")}>Copyright 2026 — The Center for Child and Family Psychiatry, PC. All rights reserved.</div>
-</footer>
+
 
 
     </div>
