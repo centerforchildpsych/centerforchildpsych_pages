@@ -445,39 +445,6 @@ export default function About() {
             </section>
 
 
-            {/* ---------- FOOTER ---------- */}
-            <footer className={styles.footer}>
-                <div className={styles.footerTop}>
-                    <a className={styles.logo} href="/">
-                        <img
-                            src="/photos/logo.png"
-                            alt="Center for Child and Family Psychiatry logo"
-                        />
-                        <span>
-                            Center for Child &amp; Family Psychiatry
-                        </span>
-                    </a>
-
-                    <div>
-                        Killeen, Texas&nbsp; · &nbsp;
-
-                        <a href="#location">
-                            Directions
-                        </a>
-
-                        &nbsp;·&nbsp;
-
-                        <a href="tel:2547741163">
-                            (254) 774-1163
-                        </a>
-                    </div>
-                </div>
-
-                <div className={styles.footerCopyright}>
-                    Copyright 2026 — The Center for Child and Family
-                    Psychiatry, PC. All rights reserved.
-                </div>
-            </footer>
         </>
     );
 }
