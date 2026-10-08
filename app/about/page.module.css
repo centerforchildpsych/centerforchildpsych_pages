@@ -321,6 +321,7 @@
     padding: 70px 6vw 10px;
 
     overflow: hidden;
+    margin-top: 80px;
 }
 
 .aboutIntroBlob {
@@ -741,6 +742,7 @@
     text-align: center;
 
     padding: 70px 6vw;
+    margin-bottom: 100px;
 }
 
 .finalCta h2 {
