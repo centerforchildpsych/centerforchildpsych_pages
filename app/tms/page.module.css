@@ -285,6 +285,7 @@
   text-align: center;
   background: var(--dark-teal);
   color: white;
+  margin-bottom: 100px;
 }
 
 .cta h2 {
