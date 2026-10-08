@@ -166,7 +166,7 @@
 }
 
 /* TABLETS */
-@media (max-width: 900px) {
+@media (max-width: 1440px) {
   .scrollngHeader {
     /* padding: 12px 20px; */
     padding-right: 100px;
