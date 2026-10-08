@@ -11,150 +11,7 @@ export default function About() {
         <>
             <PageTransition />
 
-            {/* ---------- TOP BAR ---------- */}
-            <div className={styles.topbar}>
-                <span>1103 N. Gray Street, Killeen, TX 76541</span>
-                <span className={styles.sep}>·</span>
-
-                <a href="tel:2547741163">
-                    (254) 774-1163
-                </a>
-
-                <span className={styles.sep}>·</span>
-
-                <a href="mailto:centerforchildpsych@gmail.com">
-                    centerforchildpsych@gmail.com
-                </a>
-
-                <span className={styles.sep}>·</span>
-
-                <span>FAX: (833) 464-5455</span>
-            </div>
-
-
-            {/* ---------- NAVIGATION ---------- */}
-            <nav className={styles.nav}>
-                <a className={styles.logo} href="/">
-                    <img
-                        src="/photos/logo.png"
-                        alt="Center for Child and Family Psychiatry logo"
-                    />
-                    <span>Center for Child &amp; Family Psychiatry</span>
-                </a>
-
-                <div className={styles.navRight}>
-                    <ul className={styles.navLinks}>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-
-                        <li>
-                            <a
-                                className={styles.active}
-                                href="/about-us"
-                            >
-                                About
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/meet-the-team">
-                                Meet Our Team
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://centerforchildpsych.com/?page_id=172">
-                                Insurance &amp; Billing
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Patient Resources
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://centerforchildpsych.com/?page_id=327">
-                                TMS
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://27185.portal.athenahealth.com/">
-                                Patient Portal
-                            </a>
-                        </li>
-                    </ul>
-
-                    <a
-                        className={`${styles.btn} ${styles.btnSolid} ${styles.btnBlue}`}
-                        href="https://consumer.scheduling.athena.io?locationId=27185-1"
-                    >
-                        Book Now
-                    </a>
-
-                    <button
-                        className={`${styles.navToggle} ${
-                            mobileMenuOpen ? styles.open : ""
-                        }`}
-                        aria-label="Open menu"
-                        type="button"
-                        onClick={() =>
-                            setMobileMenuOpen(!mobileMenuOpen)
-                        }
-                    >
-                        <span />
-                        <span />
-                        <span />
-                    </button>
-                </div>
-            </nav>
-
-
-            {/* ---------- MOBILE MENU ---------- */}
-            <div
-                className={`${styles.mobileMenu} ${
-                    mobileMenuOpen ? styles.mobileMenuOpen : ""
-                }`}
-            >
-                <a href="/">Home</a>
-
-                <a
-                    className={styles.active}
-                    href="/about-us"
-                >
-                    About
-                </a>
-
-                <a href="/meet-the-team">
-                    Meet Our Team
-                </a>
-
-                <a href="https://centerforchildpsych.com/?page_id=172">
-                    Insurance &amp; Billing
-                </a>
-
-                <a href="#">
-                    Patient Resources
-                </a>
-
-                <a href="https://centerforchildpsych.com/?page_id=327">
-                    TMS
-                </a>
-
-                <a href="https://27185.portal.athenahealth.com/">
-                    Patient Portal
-                </a>
-
-                <a
-                    className={`${styles.btn} ${styles.btnSolid} ${styles.btnBlue}`}
-                    href="https://consumer.scheduling.athena.io?locationId=27185-1"
-                >
-                    Book Now
-                </a>
-            </div>
+            
 
 
             {/* ---------- INTRO ---------- */}
@@ -275,7 +132,7 @@ export default function About() {
 
                         <div className={styles.standalonePhoto}>
                             <img
-                                src="/photos/about/family.jpg"
+                                src="/photos/about/family2.jpg"
                                 alt="The Shalomov family"
                             />
                         </div>
@@ -355,7 +212,7 @@ export default function About() {
                         className={`${styles.photoFrame} ${styles.landscapeFrame}`}
                     >
                         <img
-                            src="/photos/about/family.jpg"
+                            src="/photos/about/family3.jpg"
                             alt="Dr. Shalomov and Dr. Alvarado with their two children"
                         />
                     </div>
