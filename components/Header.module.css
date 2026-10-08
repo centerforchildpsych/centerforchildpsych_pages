@@ -248,15 +248,23 @@
 }
 @media (max-width: 730px) {
   .offsetHeader {
-    top: 75;
+    top: 60;
   }
   .offsetHamburger{
     top: 105;
   }
 }
+@media (max-width: 600px) {
+  .offsetHeader {
+    top: 75;
+  }
+  .offsetHamburger{
+    top: 95;
+  }
+}
 @media (max-width: 390px) {
   .offsetHeader {
-    top: 85;
+    top: 95;
   }
   .offsetHamburger{
     top: 115;
