@@ -1,0 +1,4 @@
+/* Leave room for the existing fixed, scrolling header. */
+.service-page { padding-top: clamp(135px, 12vw, 175px); min-height: 100vh; width: 100%; overflow: clip; font-family: var(--font-body, "Public Sans", sans-serif); }
+.service-page img { max-width: 100%; }
+@media (max-width: 600px) { .service-page { padding-top: 175px; } }

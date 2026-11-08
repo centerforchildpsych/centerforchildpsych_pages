@@ -6,6 +6,7 @@ import styles from "./Header.module.css"
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [servicesOpen, setServicesOpen] = useState(false);
     const [showButton, setShowButton] = useState(false);
     const [headerOffset, setHeaderOffset] = useState(false);
 
@@ -21,6 +22,8 @@ function Header() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); };
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -49,58 +52,76 @@ function Header() {
             <div className={`${styles.scrollngHeader} ${headerOffset ? styles.offsetHeader : ''}`.trim()}>
 
                 <div className={styles.logoContainer}>
-                    <Link href="/">
-                        <img
-                            className={styles.imageLogo}
-                            src='./photos/ChildCenterImg.png'
-                            alt='The Center for Child and Family Psychiatry, PC'
-                        />
-                    </Link>
-                    
-                </div>
+        <Link href="/">
+            <img
+                className={styles.imageLogo}
+                src="/photos/ChildCenterImg.png"
+                alt="The Center for Child and Family Psychiatry, PC"
+            />
+        </Link>
+    </div>
 
 
-                <div className={`${styles.hamburger} ${headerOffset ? styles.offsetHamburger : ''}`.trim()}
-                    onClick={() => setMenuOpen(!menuOpen)}
+                <button type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen} className={`${styles.hamburger} ${headerOffset ? styles.offsetHamburger : ''}`.trim()}
+                    onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); }}
                 >
                     ☰
-                </div>
+                </button>
                 <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
-                    <Link className={styles.navBarLink} href="/" onClick={() => setMenuOpen(false)}>
+                    <Link className={styles.navBarLink} href="/" onClick={closeMenu}>
                         Home
                     </Link>
                     <Link className={styles.navBarLink} href="/about"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         About
                     </Link>
+                    <div className={styles.servicesNav} onMouseLeave={() => setServicesOpen(false)}>
+                        <div className={styles.servicesNavRow}>
+                            <Link className={styles.navBarLink} href="/services" onClick={closeMenu}>Services</Link>
+                            <button type="button" className={styles.servicesToggle} aria-label="Toggle services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => setServicesOpen(!servicesOpen)}>▾</button>
+                        </div>
+                        <div id="services-submenu" className={`${styles.servicesDropdown} ${servicesOpen ? styles.servicesDropdownOpen : ''}`}>
+                            <Link href="/services" onClick={closeMenu}>All Services</Link>
+                            <Link href="/services/child-teen-psychiatry" onClick={closeMenu}>Child & Teen Psychiatry</Link>
+                            <Link href="/services/adult-psychiatry" onClick={closeMenu}>Adult Psychiatry</Link>
+                            <Link href="/services/evaluations-medication-management" onClick={closeMenu}>Diagnosis & Medication Management</Link>
+                            <Link href="/services/surgical-employment-evaluations" onClick={closeMenu}>Psychiatric Evaluations</Link>
+                            <Link href="/services/child-therapy" onClick={closeMenu}>Child & Teen Therapy</Link>
+                            <Link href="/services/psychological-testing" onClick={closeMenu}>Psychological Testing</Link>
+                            <Link href="/services/psychotherapy" onClick={closeMenu}>Formal Therapy / Psychotherapy</Link>
+                            <Link href="/services/counseling" onClick={closeMenu}>Informal Therapy / Counseling</Link>
+                            <Link href="/services/esketamine" onClick={closeMenu}>Esketamine Nasal Spray</Link>
+                            <Link href="/services/tms" onClick={closeMenu}>TMS</Link>
+                        </div>
+                    </div>
                     <Link className={styles.navBarLink} href="/providers"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         Our Providers
                     </Link>
                     <Link className={styles.navBarLink} href="/insurance"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         Insurance & Billing
                     </Link>
                     <Link className={styles.navBarLink} href="/patientResources"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         Patient Resources
                     </Link>
                     <Link className={styles.navBarLink} href="/tms"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         TMS
                     </Link>
                     <Link className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
                         target="_blank" rel="noopener noreferrer"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         Patient Portal
                     </Link>
                     <Link className={styles.navBarLink} href="/careers"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         Careers
                     </Link>
                     <Link className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
                         target="_blank" rel="noopener noreferrer"
-                        onClick={() => setMenuOpen(false)}>
+                        onClick={closeMenu}>
                         <strong>BOOK NOW</strong>
                     </Link>
                     
