@@ -11,9 +11,6 @@ export default function About() {
         <>
             <PageTransition />
 
-            
-
-
             {/* ---------- INTRO ---------- */}
             <section className={styles.aboutIntro}>
                 <div className={styles.aboutIntroBlob} />

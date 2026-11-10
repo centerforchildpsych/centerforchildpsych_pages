@@ -1,20 +1,21 @@
 "use client";
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from "./Header.module.css"
 
 function Header() {
+    const bannerRef = useRef(null);
+    const [bannerHeight, setBannerHeight] = useState(0);
+    const [scrollY, setScrollY] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [showButton, setShowButton] = useState(false);
-    const [headerOffset, setHeaderOffset] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY);
             setShowButton(window.scrollY > 300);
-            setHeaderOffset(window.scrollY < 10)
+            setScrollY(window.scrollY);
         };
 
         handleScroll(); // initialize on mount
@@ -22,6 +23,25 @@ function Header() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    useEffect(() => {
+        const banner = bannerRef.current;
+        if (!banner) return;
+        const measure = () => setBannerHeight(banner.getBoundingClientRect().height);
+        measure();
+        const observer = new ResizeObserver(measure);
+        observer.observe(banner);
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (!menuOpen) return;
+        const previous = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        const onEscape = (event) => { if (event.key === 'Escape') closeMenu(); };
+        window.addEventListener('keydown', onEscape);
+        return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', onEscape); };
+    }, [menuOpen]);
 
     const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); };
 
@@ -34,7 +54,7 @@ function Header() {
 
     return (
         <>
-            <p className={styles.easeyStyle}>
+            <p ref={bannerRef} className={styles.easeyStyle}>
                 <a href="https://www.google.com/maps/place/1103+N+Gray+St,+Killeen,+TX+76541"
                     target="_blank" rel="noopener noreferrer">1103 N. Gray Street | Killeen, TX 76541</a>
                 {" "}|{" "}
@@ -49,7 +69,8 @@ function Header() {
                 PHONE: <a href="tel:+12547741163">(254) 774-1163</a> | FAX: <a href="tel:+18334645455">833-464-5455</a>
             </p>
 
-            <div className={`${styles.scrollngHeader} ${headerOffset ? styles.offsetHeader : ''}`.trim()}>
+            <div className={styles.headerSpacer} aria-hidden="true" />
+            <div className={styles.scrollngHeader} style={{ top: Math.max(0, bannerHeight - scrollY) }}>
 
                 <div className={styles.logoContainer}>
         <Link href="/">
@@ -62,12 +83,12 @@ function Header() {
     </div>
 
 
-                <button type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen} className={`${styles.hamburger} ${headerOffset ? styles.offsetHamburger : ''}`.trim()}
+                <button type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="main-navigation" className={styles.hamburger}
                     onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); }}
                 >
-                    ☰
+                    {menuOpen ? "✕" : "☰"}
                 </button>
-                <div className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
+                <nav aria-label="Main navigation" id="main-navigation" className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
                     <Link className={styles.navBarLink} href="/" onClick={closeMenu}>
                         Home
                     </Link>
@@ -75,7 +96,7 @@ function Header() {
                         onClick={closeMenu}>
                         About
                     </Link>
-                    <div className={styles.servicesNav} onMouseLeave={() => setServicesOpen(false)}>
+                    <div className={styles.servicesNav} onMouseLeave={() => { if (window.matchMedia("(min-width: 1201px)").matches) setServicesOpen(false); }}>
                         <div className={styles.servicesNavRow}>
                             <Link className={styles.navBarLink} href="/services" onClick={closeMenu}>Services</Link>
                             <button type="button" className={styles.servicesToggle} aria-label="Toggle services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => setServicesOpen(!servicesOpen)}>▾</button>
@@ -125,7 +146,7 @@ function Header() {
                         <strong>BOOK NOW</strong>
                     </Link>
                     
-                </div>
+                </nav>
 
                 {showButton && (
                     <button className={styles.scrollTopBtn} onClick={scrollToTop}>
