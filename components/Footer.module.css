@@ -49,8 +49,14 @@
     font-size:12.5px;
     opacity:0.75;
   }
-
-
+.ffTitle {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #F2C572;
+    margin: 28px 0 16px;
+    line-height: 1.2;
+}
 .footer { width:100%; box-sizing:border-box; font-family:'Public Sans',sans-serif; }
 .footer * { box-sizing:border-box; }
 .logo { display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:600; font-size:17px; color:#fff; text-decoration:none; }
@@ -60,4 +66,52 @@
 .btnSolid.btnPurple {background:#8B6F94;color:#fff;opacity:1}
 .btnSolid.btnPurple:hover {background:#75607d}
 .footer a:focus-visible {outline:2px solid #F2C572;outline-offset:3px}
+.socialHeading {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #F2C572;
+    margin: 28px 0 16px;
+    line-height: 1.2;
+}
+
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.socialLinks a {
+    /* width: 50px; */
+    height: 50px;
+    flex: 0 0 50px;
+
+    border: 2px solid #dfb971;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #dfb971;
+    opacity: 1;
+    text-decoration: none;
+    padding: 0;
+
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.socialLinks a:hover {
+    background: #D9A441;
+    color: #24424B;
+    transform: translateY(-3px);
+}
+
+.socialLinks svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
 @media(max-width:700px){.footer{padding:36px 5vw}.footerTopRow{gap:30px}.fAddress{flex-wrap:wrap}.fLead{max-width:none}}
