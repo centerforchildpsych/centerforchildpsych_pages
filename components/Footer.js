@@ -50,15 +50,15 @@ export default function Footer() {
     <div className={`${styles.fCol}`}>
     <h3>Services</h3>
     <ul className={`${styles.fLinks}`}>
-    <li><a href="/service-child-teen-psychiatry">Child &amp; Teen Psychiatry</a></li>
-    <li><a href="/service-adult-psychiatry">Adult Psychiatry</a></li>
-    <li><a href="/service-evaluations-medication-management">Diagnosis &amp; Medication Management</a></li>
-    <li><a href="/service-psychological-testing">Psychological Testing</a></li>
-    <li><a href="/service-psychotherapy">Psychotherapy</a></li>
-    <li><a href="/service-counseling">Counseling &amp; Coaching</a></li>
-    <li><a href="/service-child-therapy">Child &amp; Teen Therapy</a></li>
-    <li><a href="/service-tms">TMS</a></li>
-    <li><a href="/service-esketamine">Esketamine</a></li>
+    <li><a href="/services/child-teen-psychiatry">Child &amp; Teen Psychiatry</a></li>
+    <li><a href="/services/adult-psychiatry">Adult Psychiatry</a></li>
+    <li><a href="/services/evaluations-medication-management">Diagnosis &amp; Medication Management</a></li>
+    <li><a href="/services/psychological-testing">Psychological Testing</a></li>
+    <li><a href="/services/psychotherapy">Psychotherapy</a></li>
+    <li><a href="/services/counseling">Counseling &amp; Coaching</a></li>
+    <li><a href="/services/child-therapy">Child &amp; Teen Therapy</a></li>
+    <li><a href="/services/tms">TMS</a></li>
+    <li><a href="/services/esketamine">Esketamine</a></li>
     </ul>
     </div>
     <div className={`${styles.fCol}`}>
