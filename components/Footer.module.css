@@ -1,9 +1,63 @@
-.easeyStyle {
-  background: var(--teal-green);
-  font-family:var(--font-mono);
-  color: #ffffff;
-  text-align: center;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: 500;
-}
+  /* ---------- FOOTER ---------- */
+  .footer{
+    background:#24424B;
+    color:#e7ece9;
+    padding:40px 6vw;
+    font-size:13.5px;
+  }
+  .footer .logo{color:#fff;}
+  .footer a{text-decoration:none; opacity:0.8;}
+  .footer a:hover{opacity:1;}
+  .footerTopRow{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; max-width:1200px; margin:0 auto 40px;}
+  @media (max-width:700px){ .footerTopRow{grid-template-columns:1fr;} }
+  .footerGrid{display:grid; grid-template-columns:1fr 1.3fr 1.3fr; gap:44px; max-width:1200px; margin:0 auto 36px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.15);}
+  @media (max-width:700px){ .footerGrid{grid-template-columns:1fr; gap:30px;} }
+  .fMapBlock .footerMap{margin:0; height:260px;}
+  .fAddress{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-top:14px; font-size:14.5px; line-height:1.5; color:#fff;}
+  .fAddrItem + .fAddrItem{margin-top:10px;}
+  .fAddress a{color:#fff; text-decoration:none;}
+  .fAddress .fAddrItem span{display:block; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.04em; color:rgba(231,236,233,0.6); margin-bottom:2px;}
+  .fBrand .logo{margin-bottom:16px;}
+  .fLead{font-family:'Fraunces', serif; font-size:19px; line-height:1.4; color:#fff; margin:0 0 20px; max-width:300px;}
+  .fBrand .btn{opacity:1; color:#fff;}
+  .fBtns{display:flex; flex-wrap:wrap; gap:12px;}
+  .footer .fBtnOutline{background:#6E8C5F; border:1.5px solid #6E8C5F; color:#fff; box-shadow:none;}
+  .footer .fBtnOutline:hover{background:#5B7A4D; border-color:#5B7A4D; color:#fff;}
+  .cta-terra.btnSolid{background:#C4694A; color:#fff;}
+  .cta-terra.btnSolid:hover{background:#AD5A3E;}
+  .footerTags{list-style:none; margin:22px 0 0; padding:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px; color:#e7ece9;}
+  .footerTags li::before{content:"✓"; color:#F2C572; margin-right:8px;}
+  .fCol h3{font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#F2C572; margin:0 0 16px;}
+  .fLinks, .fContact{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; font-size:14px; line-height:1.5;}
+  .fContact li span{display:block; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.04em; color:rgba(231,236,233,0.6); margin-bottom:2px;}
+  .footer .fLinks a, .footer .fContact a{color:#fff; opacity:0.85;}
+  .footer .fLinks a:hover, .footer .fContact a:hover{opacity:1; text-decoration:underline;}
+  .footer .fDir{display:inline-block; white-space:nowrap; flex:0 0 auto; margin-top:6px; color:#F2C572 !important; opacity:1 !important; font-weight:600;}
+  .footerMap{max-width:1200px; margin:0 auto 30px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.2); height:280px;}
+  .footerMap iframe{width:100%; height:100%; border:0; display:block;}
+  .footerCopyright{max-width:1200px; margin-left:auto; margin-right:auto;}
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom:22px;
+  }
+  .footerCopyright{
+    border-top:1px solid rgba(255,255,255,0.15);
+    padding-top:18px;
+    font-size:12.5px;
+    opacity:0.75;
+  }
+
+
+.footer { width:100%; box-sizing:border-box; font-family:'Public Sans',sans-serif; }
+.footer * { box-sizing:border-box; }
+.logo { display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:600; font-size:17px; color:#fff; text-decoration:none; }
+.logo img { width:38px; height:38px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+.btn { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:12.5px; font-weight:500; text-decoration:none; padding:11px 20px; border-radius:100px; transition:background .2s,transform .2s; }
+.btn:hover {transform:translateY(-2px)}
+.btnSolid.btnPurple {background:#8B6F94;color:#fff;opacity:1}
+.btnSolid.btnPurple:hover {background:#75607d}
+.footer a:focus-visible {outline:2px solid #F2C572;outline-offset:3px}
+@media(max-width:700px){.footer{padding:36px 5vw}.footerTopRow{gap:30px}.fAddress{flex-wrap:wrap}.fLead{max-width:none}}

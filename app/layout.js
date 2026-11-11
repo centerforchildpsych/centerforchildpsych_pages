@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header/>
         {children}
-        <GoogleMap/>
+        {/* <GoogleMap/> */}
         <Footer/>
       </body>
     </html>
