@@ -138,7 +138,7 @@ function Header() {
                             <button type="button" className={styles.servicesToggle} aria-label="Toggle Join Our Team submenu" aria-expanded={careersOpen} aria-controls="careers-submenu" onClick={() => { setCareersOpen(!careersOpen); setServicesOpen(false); setAboutOpen(false); }}>▾</button>
                         </div>
                         <div id="careers-submenu" className={`${styles.servicesDropdown} ${careersOpen ? styles.servicesDropdownOpen : ''}`}>
-                            <Link href="/students-volunteers" onClick={closeMenu}>Students &amp; Volunteers</Link>
+                            <Link href="/careers" onClick={closeMenu}>Students &amp; Volunteers</Link>
                         </div>
                     </div>
                     <a className={styles.navBarLink} href="https://27185.portal.athenahealth.com/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Patient Portal</a>
