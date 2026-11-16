@@ -13,6 +13,7 @@ function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
     const [aboutOpen, setAboutOpen] = useState(false);
+    const [careersOpen, setCareersOpen] = useState(false);
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
@@ -46,7 +47,7 @@ function Header() {
         return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', onEscape); };
     }, [menuOpen]);
 
-    const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); setAboutOpen(false); };
+    const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); setAboutOpen(false); setCareersOpen(false); };
 
     // Close the mobile navigation and both dropdowns whenever the route changes.
     // This also handles navigation triggered outside the header.
@@ -54,6 +55,7 @@ function Header() {
         setMenuOpen(false);
         setServicesOpen(false);
         setAboutOpen(false);
+        setCareersOpen(false);
     }, [pathname]);
 
     const scrollToTop = () => {
@@ -95,74 +97,52 @@ function Header() {
 
 
                 <button type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="main-navigation" className={styles.hamburger}
-                    onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); setAboutOpen(false); }}
+                    onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); setAboutOpen(false); setCareersOpen(false); }}
                 >
                     {menuOpen ? "✕" : "☰"}
                 </button>
                 <nav aria-label="Main navigation" id="main-navigation" className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
-                    <Link className={styles.navBarLink} href="/" onClick={closeMenu}>
-                        Home
-                    </Link>
-                    <div className={styles.servicesNav} onMouseLeave={() => { if (window.matchMedia("(min-width: 1201px)").matches) setAboutOpen(false); }}>
+                    <Link className={styles.navBarLink} href="/" onClick={closeMenu}>Home</Link>
+                    <div className={styles.servicesNav}>
                         <div className={styles.servicesNavRow}>
-                            <Link className={styles.navBarLink} href="/about" onClick={closeMenu}>About</Link>
-                            <button type="button" className={styles.servicesToggle} aria-label="Toggle About submenu" aria-expanded={aboutOpen} aria-controls="about-submenu" onClick={() => { setAboutOpen(!aboutOpen); setServicesOpen(false); }}>▾</button>
+                            <Link className={styles.navBarLink} href="/about" onClick={closeMenu}>About Us</Link>
+                            <button type="button" className={styles.servicesToggle} aria-label="Toggle About Us submenu" aria-expanded={aboutOpen} aria-controls="about-submenu" onClick={() => { setAboutOpen(!aboutOpen); setServicesOpen(false); setCareersOpen(false); }}>▾</button>
                         </div>
                         <div id="about-submenu" className={`${styles.servicesDropdown} ${aboutOpen ? styles.servicesDropdownOpen : ''}`}>
-                            <Link href="/about" onClick={closeMenu}>About Us</Link>
                             <Link href="/our-office-design" onClick={closeMenu}>Our Office Design</Link>
                         </div>
                     </div>
-                    <div className={styles.servicesNav} onMouseLeave={() => { if (window.matchMedia("(min-width: 1201px)").matches) setServicesOpen(false); }}>
+                    <div className={styles.servicesNav}>
                         <div className={styles.servicesNavRow}>
                             <Link className={styles.navBarLink} href="/services" onClick={closeMenu}>Services</Link>
-                            <button type="button" className={styles.servicesToggle} aria-label="Toggle services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => { setServicesOpen(!servicesOpen); setAboutOpen(false); }}>▾</button>
+                            <button type="button" className={styles.servicesToggle} aria-label="Toggle Services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => { setServicesOpen(!servicesOpen); setAboutOpen(false); setCareersOpen(false); }}>▾</button>
                         </div>
                         <div id="services-submenu" className={`${styles.servicesDropdown} ${servicesOpen ? styles.servicesDropdownOpen : ''}`}>
-                            <Link href="/services" onClick={closeMenu}>All Services</Link>
-                            <Link href="/services/child-teen-psychiatry" onClick={closeMenu}>Child & Teen Psychiatry</Link>
+                            <Link href="/services/child-teen-psychiatry" onClick={closeMenu}>Child &amp; Teen Psychiatry</Link>
                             <Link href="/services/adult-psychiatry" onClick={closeMenu}>Adult Psychiatry</Link>
-                            <Link href="/services/evaluations-medication-management" onClick={closeMenu}>Diagnosis & Medication Management</Link>
-                            <Link href="/services/surgical-employment-evaluations" onClick={closeMenu}>Psychiatric Evaluations</Link>
-                            <Link href="/services/child-therapy" onClick={closeMenu}>Child & Teen Therapy</Link>
-                            <Link href="/services/psychological-testing" onClick={closeMenu}>Psychological Testing</Link>
-                            <Link href="/services/psychotherapy" onClick={closeMenu}>Formal Therapy / Psychotherapy</Link>
-                            <Link href="/services/counseling" onClick={closeMenu}>Informal Therapy / Counseling</Link>
+                            <Link href="/services/evaluations-medication-management" onClick={closeMenu}>Diagnosis &amp; Medication Management</Link>
+                            <Link href="/services/surgical-employment-evaluations" onClick={closeMenu}>Psychiatric Evaluations for Surgery, Employment &amp; More</Link>
+                            <Link href="/services/psychological-testing" onClick={closeMenu}>Psychological Testing: ADHD, Autism, Learning Disabilities &amp; More</Link>
+                            <Link href="/services/psychotherapy" onClick={closeMenu}>Formal Therapy: Psychotherapy, Cognitive Behavioral Therapy &amp; More</Link>
+                            <Link href="/services/counseling" onClick={closeMenu}>Informal Therapy: Counseling, Coaching, and Motivational Interviewing</Link>
+                            <Link href="/services/child-therapy" onClick={closeMenu}>Child &amp; Teen Therapy</Link>
+                            <Link href="/services/tms" onClick={closeMenu}>Transcranial Magnetic Stimulation (TMS)</Link>
                             <Link href="/services/esketamine" onClick={closeMenu}>Esketamine Nasal Spray</Link>
-                            <Link href="/services/tms" onClick={closeMenu}>TMS</Link>
                         </div>
                     </div>
-                    <Link className={styles.navBarLink} href="/providers"
-                        onClick={closeMenu}>
-                        Our Providers
-                    </Link>
-                    <Link className={styles.navBarLink} href="/insurance"
-                        onClick={closeMenu}>
-                        Insurance & Billing
-                    </Link>
-                    <Link className={styles.navBarLink} href="/patientResources"
-                        onClick={closeMenu}>
-                        Patient Resources
-                    </Link>
-                    <Link className={styles.navBarLink} href="/tms"
-                        onClick={closeMenu}>
-                        TMS
-                    </Link>
-                    <Link className={styles.navBarLink} href="https://27185.portal.athenahealth.com/"
-                        target="_blank" rel="noopener noreferrer"
-                        onClick={closeMenu}>
-                        Patient Portal
-                    </Link>
-                    <Link className={styles.navBarLink} href="/careers"
-                        onClick={closeMenu}>
-                        Careers
-                    </Link>
-                    <Link className={styles.navButton} href="https://consumer.scheduling.athena.io/?locationId=27185-1"
-                        target="_blank" rel="noopener noreferrer"
-                        onClick={closeMenu}>
-                        <strong>BOOK NOW</strong>
-                    </Link>
-                    
+                    <Link className={styles.navBarLink} href="/take-our-quiz" onClick={closeMenu}>Take Our Quiz</Link>
+                    <Link className={styles.navBarLink} href="/insurance" onClick={closeMenu}>Costs &amp; Coverage</Link>
+                    <div className={styles.servicesNav}>
+                        <div className={styles.servicesNavRow}>
+                            <Link className={styles.navBarLink} href="/careers" onClick={closeMenu}>Join Our Team</Link>
+                            <button type="button" className={styles.servicesToggle} aria-label="Toggle Join Our Team submenu" aria-expanded={careersOpen} aria-controls="careers-submenu" onClick={() => { setCareersOpen(!careersOpen); setServicesOpen(false); setAboutOpen(false); }}>▾</button>
+                        </div>
+                        <div id="careers-submenu" className={`${styles.servicesDropdown} ${careersOpen ? styles.servicesDropdownOpen : ''}`}>
+                            <Link href="/students-volunteers" onClick={closeMenu}>Students &amp; Volunteers</Link>
+                        </div>
+                    </div>
+                    <a className={styles.navBarLink} href="https://27185.portal.athenahealth.com/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Patient Portal</a>
+                    <Link className={styles.navButton} href="/book-now" onClick={closeMenu}><strong>BOOK NOW</strong></Link>
                 </nav>
 
                 {showButton && (
