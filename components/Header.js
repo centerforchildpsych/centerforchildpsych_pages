@@ -1,15 +1,18 @@
 "use client";
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import styles from "./Header.module.css"
 
 function Header() {
+    const pathname = usePathname();
     const bannerRef = useRef(null);
     const [bannerHeight, setBannerHeight] = useState(0);
     const [scrollY, setScrollY] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const [servicesOpen, setServicesOpen] = useState(false);
+    const [aboutOpen, setAboutOpen] = useState(false);
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
@@ -43,7 +46,15 @@ function Header() {
         return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', onEscape); };
     }, [menuOpen]);
 
-    const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); };
+    const closeMenu = () => { setMenuOpen(false); setServicesOpen(false); setAboutOpen(false); };
+
+    // Close the mobile navigation and both dropdowns whenever the route changes.
+    // This also handles navigation triggered outside the header.
+    useEffect(() => {
+        setMenuOpen(false);
+        setServicesOpen(false);
+        setAboutOpen(false);
+    }, [pathname]);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -84,7 +95,7 @@ function Header() {
 
 
                 <button type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen} aria-controls="main-navigation" className={styles.hamburger}
-                    onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); }}
+                    onClick={() => { setMenuOpen(!menuOpen); setServicesOpen(false); setAboutOpen(false); }}
                 >
                     {menuOpen ? "✕" : "☰"}
                 </button>
@@ -92,14 +103,20 @@ function Header() {
                     <Link className={styles.navBarLink} href="/" onClick={closeMenu}>
                         Home
                     </Link>
-                    <Link className={styles.navBarLink} href="/about"
-                        onClick={closeMenu}>
-                        About
-                    </Link>
+                    <div className={styles.servicesNav} onMouseLeave={() => { if (window.matchMedia("(min-width: 1201px)").matches) setAboutOpen(false); }}>
+                        <div className={styles.servicesNavRow}>
+                            <Link className={styles.navBarLink} href="/about" onClick={closeMenu}>About</Link>
+                            <button type="button" className={styles.servicesToggle} aria-label="Toggle About submenu" aria-expanded={aboutOpen} aria-controls="about-submenu" onClick={() => { setAboutOpen(!aboutOpen); setServicesOpen(false); }}>▾</button>
+                        </div>
+                        <div id="about-submenu" className={`${styles.servicesDropdown} ${aboutOpen ? styles.servicesDropdownOpen : ''}`}>
+                            <Link href="/about" onClick={closeMenu}>About Us</Link>
+                            <Link href="/our-office-design" onClick={closeMenu}>Our Office Design</Link>
+                        </div>
+                    </div>
                     <div className={styles.servicesNav} onMouseLeave={() => { if (window.matchMedia("(min-width: 1201px)").matches) setServicesOpen(false); }}>
                         <div className={styles.servicesNavRow}>
                             <Link className={styles.navBarLink} href="/services" onClick={closeMenu}>Services</Link>
-                            <button type="button" className={styles.servicesToggle} aria-label="Toggle services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => setServicesOpen(!servicesOpen)}>▾</button>
+                            <button type="button" className={styles.servicesToggle} aria-label="Toggle services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => { setServicesOpen(!servicesOpen); setAboutOpen(false); }}>▾</button>
                         </div>
                         <div id="services-submenu" className={`${styles.servicesDropdown} ${servicesOpen ? styles.servicesDropdownOpen : ''}`}>
                             <Link href="/services" onClick={closeMenu}>All Services</Link>
