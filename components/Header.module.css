@@ -90,7 +90,7 @@
   box-shadow: 0 16px 32px rgba(0,0,0,.16);
   z-index: 1100;
 }
-.servicesDropdownOpen, .servicesNav:hover .servicesDropdown, .servicesNav:focus-within .servicesDropdown { display: flex; flex-direction: column; }
+.servicesDropdownOpen { display: flex; flex-direction: column; }
 .servicesDropdown a { display: block; padding: 10px 12px; border-radius: 6px; color: var(--ink); font: .9rem/1.4 var(--font-body); white-space: normal; }
 .servicesDropdown a:hover, .servicesDropdown a:focus-visible { background: var(--sand); color: var(--brand-blue-deep); }
 .scrollTopBtn {

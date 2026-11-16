@@ -103,7 +103,7 @@ function Header() {
                 </button>
                 <nav aria-label="Main navigation" id="main-navigation" className={`${styles.navLinks} ${menuOpen ? styles.active : ''}`.trim()}>
                     <Link className={styles.navBarLink} href="/" onClick={closeMenu}>Home</Link>
-                    <div className={styles.servicesNav}>
+                    <div className={styles.servicesNav} onMouseEnter={() => { if (window.matchMedia("(min-width: 1201px)").matches) setAboutOpen(true); }} onMouseLeave={() => setAboutOpen(false)}>
                         <div className={styles.servicesNavRow}>
                             <Link className={styles.navBarLink} href="/about" onClick={closeMenu}>About Us</Link>
                             <button type="button" className={styles.servicesToggle} aria-label="Toggle About Us submenu" aria-expanded={aboutOpen} aria-controls="about-submenu" onClick={() => { setAboutOpen(!aboutOpen); setServicesOpen(false); setCareersOpen(false); }}>▾</button>
@@ -112,7 +112,7 @@ function Header() {
                             <Link href="/our-office-design" onClick={closeMenu}>Our Office Design</Link>
                         </div>
                     </div>
-                    <div className={styles.servicesNav}>
+                    <div className={styles.servicesNav} onMouseEnter={() => { if (window.matchMedia("(min-width: 1201px)").matches) setServicesOpen(true); }} onMouseLeave={() => setServicesOpen(false)}>
                         <div className={styles.servicesNavRow}>
                             <Link className={styles.navBarLink} href="/services" onClick={closeMenu}>Services</Link>
                             <button type="button" className={styles.servicesToggle} aria-label="Toggle Services submenu" aria-expanded={servicesOpen} aria-controls="services-submenu" onClick={() => { setServicesOpen(!servicesOpen); setAboutOpen(false); setCareersOpen(false); }}>▾</button>
@@ -132,7 +132,7 @@ function Header() {
                     </div>
                     <Link className={styles.navBarLink} href="/take-our-quiz" onClick={closeMenu}>Take Our Quiz</Link>
                     <Link className={styles.navBarLink} href="/insurance" onClick={closeMenu}>Costs &amp; Coverage</Link>
-                    <div className={styles.servicesNav}>
+                    <div className={styles.servicesNav} onMouseEnter={() => { if (window.matchMedia("(min-width: 1201px)").matches) setCareersOpen(true); }} onMouseLeave={() => setCareersOpen(false)}>
                         <div className={styles.servicesNavRow}>
                             <Link className={styles.navBarLink} href="/careers" onClick={closeMenu}>Join Our Team</Link>
                             <button type="button" className={styles.servicesToggle} aria-label="Toggle Join Our Team submenu" aria-expanded={careersOpen} aria-controls="careers-submenu" onClick={() => { setCareersOpen(!careersOpen); setServicesOpen(false); setAboutOpen(false); }}>▾</button>
